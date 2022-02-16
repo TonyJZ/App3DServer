@@ -1,0 +1,47 @@
+<!-- 巡航 -->
+<style>
+  .cruise {
+    position: absolute;
+    bottom:32px;
+    left:calc(50% - 62px);
+    z-index:100;
+  }
+  .cruise img {
+    width:124px;
+  }
+</style>
+
+<div class="cruise">
+  <img src="./assets/darkStyleImg/btn_xuhang.png" alt="">
+</div>
+
+<script>
+  $(function(){
+    
+    $('.cruise img').click(function(){
+      let src = $(this).attr('src');
+      if(src.indexOf('_p')===-1){
+        $(this).attr('src', src.replace(/\.png/g, '_p.png'));
+        let onFinish = function() {
+          console.log("finished");
+        };
+        let onProgress = function(position) {
+          if(position.name === '2'){
+          }
+          return false;
+        };
+        /* window.myApp.app3dApp.getCurrentCamera().flyingInspection(
+          featuresConfig.cameraFeatureConfig.ctrlPoints,
+          featuresConfig.cameraFeatureConfig.focalPoints,
+          featuresConfig.cameraFeatureConfig.sectionTimes,
+          onFinish, true, //是否重复执行
+          onProgress, 10); */
+        window.myApp.app3dApp.getCurrentCamera().flyInPath(
+          featuresConfig.cameraFeatureConfig.path, true, onFinish, onProgress, 10) 
+      }else {
+        $(this).attr('src', src.replace(/_p\.png/g, '.png'));
+        window.myApp.flyToHomePosition();
+      }
+    })
+  })
+</script>

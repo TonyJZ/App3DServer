@@ -1,0 +1,742 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for 3ds max 2019 v1.3.33"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        9
+      ],
+      "extensions": {}
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "translation": [
+        -327.574219,
+        47.65268,
+        -162.624939
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui"
+    },
+    {
+      "mesh": 0,
+      "translation": [
+        901.659546,
+        -37.6666145,
+        1277.46118
+      ],
+      "rotation": [
+        0.7071068,
+        0,
+        0,
+        0.7071067
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui001"
+    },
+    {
+      "mesh": 0,
+      "translation": [
+        -1341.92993,
+        -35.2971764,
+        -735.4608
+      ],
+      "rotation": [
+        0.7071068,
+        0,
+        0,
+        0.7071067
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui002"
+    },
+    {
+      "mesh": 0,
+      "translation": [
+        2677.751,
+        -35.2971764,
+        401.756165
+      ],
+      "rotation": [
+        0.7071068,
+        0,
+        0,
+        0.7071067
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui006"
+    },
+    {
+      "mesh": 0,
+      "translation": [
+        -1723.40332,
+        -37.6666145,
+        1662.28491
+      ],
+      "rotation": [
+        0.6272114,
+        -0.326505631,
+        0.326505721,
+        0.6272113
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui008"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        715.081055,
+        -37.6666145,
+        -1892.43457
+      ],
+      "rotation": [
+        0.7064338,
+        -0.0308435541,
+        0.0308435559,
+        0.7064338
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui004"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        2524.08179,
+        -37.6666145,
+        1873.4707
+      ],
+      "rotation": [
+        0.6272114,
+        -0.3265055,
+        0.3265055,
+        0.6272114
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui005"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        -2688.22485,
+        -37.6666145,
+        428.115784
+      ],
+      "rotation": [
+        0.6272114,
+        -0.3265055,
+        0.3265055,
+        0.6272114
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui007"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        -126.850037,
+        -35.2971764,
+        1219.97607
+      ],
+      "rotation": [
+        0.7071068,
+        2.10734221e-8,
+        -2.10734257e-8,
+        0.7071067
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_ui003"
+    },
+    {
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "Default light"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 17,
+            "NORMAL": 18,
+            "TEXCOORD_0": 19
+          },
+          "indices": 16,
+          "mode": 4,
+          "material": 0,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_ui001"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 21,
+            "NORMAL": 22,
+            "TEXCOORD_0": 23
+          },
+          "indices": 20,
+          "mode": 4,
+          "material": 1,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_ui004"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations",
+      "byteOffset": 0
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 72,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 288,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 144,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 576,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 216,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 864,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 288,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1152,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 360,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1440,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 432,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 1728,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 504,
+      "componentType": 5126,
+      "count": 18,
+      "max": [
+        6.66666651
+      ],
+      "min": [
+        0
+      ],
+      "type": "SCALAR",
+      "name": "accessorAnimationInput"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 2016,
+      "componentType": 5126,
+      "count": 18,
+      "type": "VEC4",
+      "name": "accessorAnimationRotations"
+    },
+    {
+      "componentType": 5123,
+      "count": 948,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "max": [
+        28.01471,
+        2.5,
+        -0.0000610351563
+      ],
+      "min": [
+        -28.01471,
+        -2.5,
+        -72.96374
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "componentType": 5123,
+      "count": 948,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "max": [
+        28.01474,
+        2.50024414,
+        -0.0000610351563
+      ],
+      "min": [
+        -28.0146942,
+        -2.50024414,
+        -72.96373
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 326,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 576,
+      "name": "bufferViewAnimationFloatScalar"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 576,
+      "byteLength": 2304,
+      "name": "bufferViewAnimationFloatVec4"
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 2880,
+      "byteLength": 2000
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 4880,
+      "byteLength": 1998
+    }
+  ],
+  "buffers": [
+    {
+      "name": "model_ui",
+      "byteLength": 6880,
+      "uri": "model_ui.bin"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8078432,
+          0.8078432,
+          0.8078432,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.55,
+        "roughnessFactor": 0.11
+      },
+      "emissiveFactor": [
+        0.00134150812,
+        0.0180145316,
+        0.025087947
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639281",
+      "doubleSided": false
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.8078432,
+          0.8078432,
+          0.8078432,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "metallicFactor": 0.55,
+        "roughnessFactor": 0.11
+      },
+      "emissiveFactor": [
+        0.030487828,
+        0.00144554337,
+        0.004205218
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639282",
+      "doubleSided": false
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "tex_building.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "tex_building.jpg"
+    }
+  ],
+  "images": [
+    {
+      "name": "tex_building",
+      "uri": "tex_building.jpg"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 1,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 1,
+          "target": {
+            "node": 2,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 2,
+          "target": {
+            "node": 3,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 3,
+          "target": {
+            "node": 4,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 4,
+          "target": {
+            "node": 5,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 5,
+          "target": {
+            "node": 6,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 6,
+          "target": {
+            "node": 7,
+            "path": "rotation"
+          }
+        },
+        {
+          "sampler": 7,
+          "target": {
+            "node": 8,
+            "path": "rotation"
+          }
+        }
+      ],
+      "samplers": [
+        {
+          "input": 0,
+          "interpolation": "LINEAR",
+          "output": 1
+        },
+        {
+          "input": 2,
+          "interpolation": "LINEAR",
+          "output": 3
+        },
+        {
+          "input": 4,
+          "interpolation": "LINEAR",
+          "output": 5
+        },
+        {
+          "input": 6,
+          "interpolation": "LINEAR",
+          "output": 7
+        },
+        {
+          "input": 8,
+          "interpolation": "LINEAR",
+          "output": 9
+        },
+        {
+          "input": 10,
+          "interpolation": "LINEAR",
+          "output": 11
+        },
+        {
+          "input": 12,
+          "interpolation": "LINEAR",
+          "output": 13
+        },
+        {
+          "input": 14,
+          "interpolation": "LINEAR",
+          "output": 15
+        }
+      ],
+      "name": "All Animations"
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

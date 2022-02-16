@@ -1,0 +1,20 @@
+{
+    "name": "expressWebServer",
+    "version": "0.0.1",
+    "main": "server.js",
+    "dependencies": {
+        "body-parser": "~1.15.1",
+        "cli-color": "^1.2.0",
+        "cli-table": "*",
+        "colors": "^1.1.2",
+        "compression": "*",
+        "cookie-parser": "~1.4.3",
+        "cors": "*",
+        "ejs": "^2.5.6",
+        "express": "~4.13.4",
+        "morgan": "~1.7.0",
+        "serve-favicon": "~2.3.0",
+        "tracer": "^0.8.9"
+    },
+    "Copyright": "Appropolis Inc."
+}

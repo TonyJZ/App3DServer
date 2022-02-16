@@ -1,0 +1,367 @@
+  /* 三种label公共 Begin */
+  p{
+    margin:0;
+  }
+  .valve-wrap,.pump-wrap,.tank-wrap {
+		position: absolute;
+    pointer-events: none;
+	}
+	.dot {
+		width:10px;
+		height:10px;
+		border-radius: 50%;
+		border:4px solid rgba(62,255,153,.2);
+		position: absolute;
+		left:0;
+		bottom:0;
+	}
+	.dot::before {
+		content:'';
+		width:80px;
+		transform: rotate(-60deg);
+		transform-origin: left center;
+		border-top:1px solid #3EFF99;
+		position: absolute;
+		left:6px;
+		top:2px;
+	}
+	.dot::after {
+		content:'';
+		width:30px;
+		border-top:1px solid #3EFF99;
+		position: absolute;
+		left:45.6px;
+		top:-67.5px;
+	}
+   /* 三种label公共 End */
+   
+   /* 阀门 */
+	.valve {
+		padding:10px 15px;
+		border-radius:4px;
+		border:1px solid rgba(255,255,255,0.8);
+		background: rgba(59,170,110,0.8);
+		position: absolute;
+		top:-87px;
+		left:77px;
+		color:#3BAA6E;
+		white-space: nowrap;
+	}
+	.valve::after {
+		content: '';
+		height:60%;
+		width:4px;
+		border-radius:2px;
+		position: absolute;
+		top:20%;
+		left:-2px;
+		
+	}
+	.valve span {
+		color:#fff;
+	}
+	.valve span:nth-of-type(1) {
+		margin-right: 10px;
+	}
+	
+	/*主题颜色*/
+	/*正常*/
+  .valve-wrap.normal .valve{
+    background: rgba(59,170,110,0.8);
+  }
+  .valve-wrap.normal .valve::after{
+    background: #3EFF99;
+  }
+  .valve-wrap.normal .dot {
+		border-color: rgba(62,255,153,.2);
+		background:rgba(62,255,153,1);
+		background-clip: padding-box;
+  }
+  .valve-wrap.normal .dot::before {
+		border-top-color:#3EFF99;
+	}
+  .valve-wrap.normal .dot::after {
+		border-top-color:#3EFF99;
+	}
+  /*关闭*/
+  .valve-wrap.closed .valve{
+    background: rgba(145,145,145,0.8);
+  }
+  .valve-wrap.closed .valve::after{
+    background: #E0E0E0;
+  }
+  .valve-wrap.closed .dot {
+		border-color: rgba(224,224,224,.2);
+		background:#E0E0E0;
+		background-clip: padding-box;
+  }
+  .valve-wrap.closed .dot::before {
+		border-top-color:#E0E0E0;
+	}
+  .valve-wrap.closed .dot::after {
+		border-top-color:#E0E0E0;
+	}
+  /*异常*/
+  .valve-wrap.abnormal .valve{
+    background: rgba(255,32,32,0.7);
+  }
+  .valve-wrap,.abnormal .valve::after{
+    background: #FA5555;
+  }
+  .valve-wrap.abnormal .dot {
+		border-color: rgba(250,85,85,.2);
+		background:#FA5555;
+		background-clip: padding-box;
+  }
+  .valve-wrap.abnormal .dot::before {
+		border-top-color:#FA5555;
+	}
+  .valve-wrap.abnormal .dot::after {
+		border-top-color:#FA5555;
+	}
+  /*不工作*/
+  .valve-wrap.abnormal .valve{
+    background: rgba(28,28,28,0.8);
+  }
+  .valve-wrap.abnormal .valve::after{
+    background: #FFF;
+  }
+  .valve-wrap.abnormal .dot {
+		border-color: rgba(255,255,255,.2);
+		background:#FFF;
+		background-clip: padding-box;
+  }
+  .valve-wrap,.abnormal .dot::before {
+		border-top-color:#FFF;
+	}
+  .valve-wrap.abnormal .dot::after {
+		border-top-color:#FFF;
+	}
+  
+  
+  /* 泵 */
+  .pump {
+		padding:10px 15px;
+		border-radius:4px;
+		border:1px solid rgba(255,255,255,0.8);
+		background: rgba(0,0,0,0.6);
+		position: absolute;
+		top:-68px;
+		transform:translateY(-50%);
+		left:77px;
+		color:#3BAA6E;
+		white-space:nowrap;
+	}
+	.pump::after {
+		content: '';
+		height:60%;
+		max-height: 25px;
+		width:4px;
+		border-radius:2px;
+
+		position: absolute;
+		top:50%;
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		left:-2px;
+		
+	}
+	.pump p {
+		color:#fff;
+		padding-left:25px;
+	}
+	.pump p:nth-of-type(1){
+		color:#3EFF99;
+	}
+	.pump p:nth-of-type(2){
+		line-height: 30px;
+	}
+	.pump p>span:nth-of-type(1) {
+		margin-right:10px
+	}
+	
+	/*主题颜色*/
+	/*正常*/
+  .pump-wrap.normal .pump{
+    border-color:#3EFF99;
+  }
+  .pump-wrap.normal .pump::after {
+		background: #3EFF99;
+	}
+  .pump-wrap.normal .pump p:nth-of-type(1){
+		color:#3EFF99;
+	}
+  .pump-wrap.normal .dot {
+    border-color: rgba(62,255,153,.2);
+    background:rgba(62,255,153,1);
+    background-clip: padding-box;
+  }
+  .pump-wrap.normal .dot::before {
+    border-top-color:#3EFF99;
+  }
+  .pump-wrap.normal .dot::after {
+    border-top-color:#3EFF99;
+  }
+
+	/*关闭*/
+  .pump-wrap.closed .pump{
+    border-color:#E0E0E0;
+  }
+  .pump-wrap.closed .pump::after {
+  	background: #E0E0E0;
+  }
+  .pump-wrap.closed .pump p:nth-of-type(1){
+  	color:#E0E0E0;
+  }
+  .pump-wrap.closed .dot {
+    border-color: rgba(224,224,224,.2);
+    background:#E0E0E0;
+    background-clip: padding-box;
+  }
+  .pump-wrap.closed .dot::before {
+    border-top-color:#E0E0E0;
+  }
+  .pump-wrap.closed .dot::after {
+    border-top-color:#E0E0E0;
+  }
+  
+	/*异常*/
+  .pump-wrap,.abnormal .pump{
+    border-color:#FA5555;
+  }
+  .pump-wrap.abnormal .pump::after {
+  	background: #FA5555;
+  }
+  .pump-wrap.abnormal .pump p:nth-of-type(1){
+  	color:#FA5555;
+  }
+  .pump-wrap.abnormal .dot {
+    border-color: rgba(250,85,85,.2);
+    background:#FA5555;
+    background-clip: padding-box;
+  }
+  .pump-wrap.abnormal .dot::before {
+    border-top-color:#FA5555;
+  }
+  .pump-wrap.abnormal .dot::after {
+    border-top-color:#FA5555;
+  }
+
+	/*不工作*/
+  .pump-wrap.inoperative .pump{
+    border-color:#999999;
+  }
+  .pump-wrap.inoperative .pump::after {
+  	background: #999999;
+  }
+  .pump-wrap,.inoperative .pump p:nth-of-type(1){
+  	color:#999999;
+  }
+  .pump-wrap.inoperative .dot {
+    border-color: rgba(255,255,255,.2);
+    background:#999999;
+    background-clip: padding-box;
+  }
+  .pump-wrap.inoperative .dot::before {
+    border-top-color:#999999;
+  }
+  .pump-wrap.inoperative .dot::after {
+    border-top-color:#999999;
+  }
+
+/* 油罐 */
+  .tanks {
+		height:104px;
+		min-width: 173px;
+		padding:0px 15px 0px 18px;		
+		position: absolute;
+		top:-70px;
+		transform:translateY(-50%);
+		left:76px;
+		color:#fff;
+	}
+
+	.tanks>.data-box{
+		padding:16px 0 10px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+    position: relative;
+    z-index: 1
+	}
+  .tanks .bg {
+    width:calc(100% - 127px);
+    height:100%;
+    position: absolute;
+    top:0;
+    left:93px;
+  }
+	.tanks>.data-box>div:nth-of-type(1){
+		/*padding:16px 18px 10px;*/
+		font-size: 20px;
+		margin-right:15px;
+		margin-top: -14px;
+	}
+	.tanks span {
+		/*color:#fff;*/
+		display: block;
+
+		line-height: 26px;
+		white-space: nowrap;
+	}
+	.tanks span:nth-of-type(1) {
+		margin-right: 10px;
+	}
+	
+	/*主题颜色*/
+	/*正常*/
+  .tank-wrap.normal .dot {
+    border-color: rgba(23,117,207,.2);
+    background:rgba(23,117,207,1);
+    background-clip: padding-box;
+  }
+  .tank-wrap.normal .dot::before{
+    border-top-color:#1775CF;
+  }
+  .tank-wrap.normal .dot::after{
+    border-top-color:#1775CF;
+  }
+	/* .normal {
+		.dot {
+			border-color: rgba(23,117,207,.2);
+			background:rgba(23,117,207,1);
+			background-clip: padding-box;
+			&::before {
+				border-top-color:#1775CF;
+			}
+			&::after {
+				border-top-color:#1775CF;
+			}
+		}
+	} */
+
+	/*异常*/
+  .tank-wrap.abnormal .dot {
+    border-color: rgba(250,85,85,.2);
+    background:#FA5555;
+    background-clip: padding-box;
+  }
+  .tank-wrap.abnormal .dot::before{
+    border-top-color:#FA5555;
+  }
+  .tank-wrap.abnormal .dot::after{
+    border-top-color:#FA5555;
+  }
+	/* .abnormal {
+		.dot {
+			border-color: rgba(250,85,85,.2);
+			background:#FA5555;
+			background-clip: padding-box;
+			&::before {
+				border-top-color:#FA5555;
+			}
+			&::after {
+				border-top-color:#FA5555;
+			}
+		}
+	} */

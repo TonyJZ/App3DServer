@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_收起</title>
+    <desc>Created with Sketch.</desc>
+    <g id="首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ui-kit" transform="translate(-212.000000, -886.000000)">
+            <g id="icon_收起" transform="translate(201.000000, 873.000000)">
+                <rect id="矩形" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="38" height="38"></rect>
+                <path d="M12,13 L26,13 C26.5522847,13 27,13.4477153 27,14 C27,14.5522847 26.5522847,15 26,15 L12,15 C11.4477153,15 11,14.5522847 11,14 C11,13.4477153 11.4477153,13 12,13 Z M12.6301993,17 L25.3698007,17 C25.9220854,17 26.3698007,17.4477153 26.3698007,18 C26.3698007,18.2856378 26.2476529,18.5576419 26.0341645,18.7474093 L19.6643638,24.4094544 C19.2854778,24.7462419 18.7145222,24.7462419 18.3356362,24.4094544 L11.9658355,18.7474093 C11.5530527,18.3804913 11.515872,17.7484189 11.88279,17.3356362 C12.0725574,17.1221478 12.3445615,17 12.6301993,17 Z" id="合并形状" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

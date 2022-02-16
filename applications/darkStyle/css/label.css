@@ -1,0 +1,741 @@
+/* 三种label公共 Begin */
+p {
+  margin: 0;
+}
+
+.common-wrap,
+.pump-wrap,
+.tank-wrap,
+.camera-wrap,
+.valve-wrap,
+.icon-wrap {
+  position: absolute;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 4px solid rgba(62, 255, 153, .2);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.dot::before {
+  content: '';
+  width: 50px;
+  transform: rotate(-60deg);
+  transform-origin: left center;
+  border-top: 2px solid #3EFF99;
+  position: absolute;
+  left: 6px;
+  top: 2px;
+}
+
+.dot::after {
+  content: '';
+  width: 30px;
+  /* border-top: 2px solid #3EFF99; */
+  position: absolute;
+  left: 30.6px;
+  top: -41.5px;
+}
+
+/* 阀门小图标 */
+.camera-icon-wrap .valve,
+.valve-icon-wrap .valve {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  padding: 4px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(59, 170, 110, 0.8);
+  border-radius: 50% 50% 50% 0;
+  transform: rotateZ(-45deg);
+}
+
+.camera-icon-wrap img,
+.valve-icon-wrap img {
+  width: 16px;
+  /*transform:translateY(2px) rotateZ(45deg);*/
+  transform: rotateZ(45deg);
+  display: inline-block;
+}
+
+/*主题颜色*/
+/*正常*/
+.valve-icon-wrap.normal .valve {
+  background: rgba(59, 170, 110, 0.8);
+}
+
+/*异常*/
+.valve-icon-wrap.abnormal .valve {
+  background: rgba(255, 32, 32, 0.7);
+}
+
+.camera-icon-wrap .valve {
+  background: rgba(23, 117, 207, 0.8) !important;
+}
+
+/* ****************** */
+/* 阀门label */
+.valve-wrap {
+  z-index: 101;
+}
+
+.valve {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(59, 170, 110, 0.8);
+  position: absolute;
+  top: -62px;
+  left: 60px;
+  color: #3BAA6E;
+  white-space: nowrap;
+}
+
+.valve::after {
+  content: '';
+  height: 60%;
+  width: 5px;
+  border-radius: 3px;
+  position: absolute;
+  top: 20%;
+  left: -3px;
+
+}
+
+.valve span {
+  color: #fff;
+}
+
+.valve span:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+/*主题颜色*/
+/*正常*/
+.valve-wrap.normal .valve {
+  background: rgba(59, 170, 110, 0.8);
+}
+
+.valve-wrap.normal .valve::after {
+  background: #3EFF99;
+}
+
+.valve-wrap.normal .dot {
+  border-color: rgba(62, 255, 153, .2);
+  background: rgba(62, 255, 153, 1);
+  background-clip: padding-box;
+}
+
+.valve-wrap.normal .dot::before {
+  border-top-color: #3EFF99;
+}
+
+.valve-wrap.normal .dot::after {
+  border-top-color: #3EFF99;
+}
+
+/*关闭*/
+.valve-wrap.closed .valve {
+  background: rgba(145, 145, 145, 0.8);
+}
+
+.valve-wrap.closed .valve::after {
+  background: #E0E0E0;
+}
+
+.valve-wrap.closed .dot {
+  border-color: rgba(224, 224, 224, .2);
+  background: #E0E0E0;
+  background-clip: padding-box;
+}
+
+.valve-wrap.closed .dot::before {
+  border-top-color: #E0E0E0;
+}
+
+.valve-wrap.closed .dot::after {
+  border-top-color: #E0E0E0;
+}
+
+/*异常*/
+.valve-wrap.abnormal .valve {
+  background: rgba(255, 32, 32, 0.7);
+}
+
+.valve-wrap.abnormal .valve::after {
+  background: #FA5555;
+}
+
+.valve-wrap.abnormal .dot {
+  border-color: rgba(250, 85, 85, .2);
+  background: #FA5555;
+  background-clip: padding-box;
+}
+
+.valve-wrap.abnormal .dot::before {
+  border-top-color: #FA5555;
+}
+
+.valve-wrap.abnormal .dot::after {
+  border-top-color: #FA5555;
+}
+
+/*不工作*/
+.valve-wrap.inoperative .valve {
+  background: rgba(28, 28, 28, 0.8);
+}
+
+.valve-wrap.inoperative .valve::after {
+  background: #999999;
+}
+
+.valve-wrap.inoperative .dot {
+  border-color: rgba(153, 153, 153, .2);
+  background: #999999;
+  background-clip: padding-box;
+}
+
+.valve-wrap.inoperative .dot::before {
+  border-top-color: #999999;
+}
+
+.valve-wrap.inoperative .dot::after {
+  border-top-color: #999999;
+}
+
+/* 泵 */
+.pump {
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: -43px;
+  transform: translateY(-50%);
+  left: 62px;
+  color: #3BAA6E;
+  white-space: nowrap;
+}
+
+.pump::after {
+  content: '';
+  height: 60%;
+  max-height: 25px;
+  width: 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -3px;
+
+}
+
+.pump p {
+  color: #fff;
+  padding-left: 25px;
+}
+
+.pump p:nth-of-type(1) {
+  color: #3EFF99;
+}
+
+.pump p:nth-of-type(2) {
+  line-height: 30px;
+}
+
+.pump p>span:nth-of-type(1) {
+  margin-right: 10px
+}
+
+/*主题颜色*/
+/*正常*/
+.pump-wrap.normal .pump {
+  border-color: #3EFF99;
+}
+
+.pump-wrap.normal .pump::after {
+  background: #3EFF99;
+}
+
+.pump-wrap.normal .pump p:nth-of-type(1) {
+  color: #3EFF99;
+}
+
+.pump-wrap.normal .dot {
+  border-color: rgba(62, 255, 153, .2);
+  background: rgba(62, 255, 153, 1);
+  background-clip: padding-box;
+}
+
+.pump-wrap.normal .dot::before {
+  border-top-color: #3EFF99;
+}
+
+.pump-wrap.normal .dot::after {
+  border-top-color: #3EFF99;
+}
+
+/*关闭*/
+.pump-wrap.closed .pump {
+  border-color: #E0E0E0;
+}
+
+.pump-wrap.closed .pump::after {
+  background: #E0E0E0;
+}
+
+.pump-wrap.closed .pump p:nth-of-type(1) {
+  color: #E0E0E0;
+}
+
+.pump-wrap.closed .dot {
+  border-color: rgba(224, 224, 224, .2);
+  background: #E0E0E0;
+  background-clip: padding-box;
+}
+
+.pump-wrap.closed .dot::before {
+  border-top-color: #E0E0E0;
+}
+
+.pump-wrap.closed .dot::after {
+  border-top-color: #E0E0E0;
+}
+
+/*异常*/
+.pump-wrap,
+.abnormal .pump {
+  border-color: #FA5555;
+}
+
+.pump-wrap.abnormal .pump::after {
+  background: #FA5555;
+}
+
+.pump-wrap.abnormal .pump p:nth-of-type(1) {
+  color: #FA5555;
+}
+
+.pump-wrap.abnormal .dot {
+  border-color: rgba(250, 85, 85, .2);
+  background: #FA5555;
+  background-clip: padding-box;
+}
+
+.pump-wrap.abnormal .dot::before {
+  border-top-color: #FA5555;
+}
+
+.pump-wrap.abnormal .dot::after {
+  border-top-color: #FA5555;
+}
+
+/*不工作*/
+.pump-wrap.inoperative .pump {
+  border-color: #999999;
+}
+
+.pump-wrap.inoperative .pump::after {
+  background: #999999;
+}
+
+.pump-wrap,
+.inoperative .pump p:nth-of-type(1) {
+  color: #999999;
+}
+
+.pump-wrap.inoperative .dot {
+  border-color: rgba(255, 255, 255, .2);
+  background: #999999;
+  background-clip: padding-box;
+}
+
+.pump-wrap.inoperative .dot::before {
+  border-top-color: #999999;
+}
+
+.pump-wrap.inoperative .dot::after {
+  border-top-color: #999999;
+}
+
+/* 油罐 */
+.tanks {
+  height: 86px;
+  min-width: 132px;
+  padding: 0px 15px 0px 18px;
+  position: absolute;
+  top: -46px;
+  transform: translateY(-50%);
+  left: 60px;
+  /* color: #fff; */
+  opacity: 0.8;
+}
+
+.tanks>.data-box {
+  padding: 16px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+  color: #fff;
+}
+
+.tanks .bg {
+  width: calc(100% - 108px);
+  height: 100%;
+  position: absolute;
+  left: 80px;
+  top: 0;
+}
+
+.tanks>.data-box>div:nth-of-type(1) {
+  /*padding:16px 18px 10px;*/
+  font-size: 16px;
+  margin-right: 15px;
+  margin-top: -14px;
+  white-space: nowrap;
+}
+
+.tanks span {
+  /*color:#fff;*/
+  display: block;
+  font-size: 12px;
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/*主题颜色*/
+/*正常*/
+.tank-wrap.normal .dot {
+  border-color: rgba(23, 117, 207, .2);
+  background: rgba(23, 117, 207, 1);
+  background-clip: padding-box;
+}
+
+.tank-wrap.normal .dot::before {
+  border-top-color: #1775CF;
+}
+
+.tank-wrap.normal .dot::after {
+  border-top-color: #1775CF;
+}
+
+/*异常*/
+.tank-wrap.abnormal .dot {
+  border-color: rgba(250, 85, 85, .2);
+  background: #FA5555;
+  background-clip: padding-box;
+}
+
+.tank-wrap.abnormal .dot::before {
+  border-top-color: #FA5555;
+}
+
+.tank-wrap.abnormal .dot::after {
+  border-top-color: #FA5555;
+}
+
+.icon-wrap {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  left: 10px;
+  pointer-events: all;
+  /* visibility: hidden; */
+}
+
+/* 新的通用label */
+.common-box {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  padding: 8px 20px;
+  opacity: 0.8;
+  background: #000;
+  box-sizing: border-box;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  /* transition: all 0.1s linear; */
+}
+
+.common-box:hover span {
+  opacity: 0.8;
+}
+
+.common-box span {
+  color: #fff;
+}
+
+.common-box::before,
+.common-box::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 10px);
+  width: 0px;
+  height: 0px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.common-box::before {
+  bottom: -7px;
+  border-top: 10px solid #000;
+  z-index: 1;
+}
+
+.common-box::after {
+  bottom: -10px;
+  border-top: 10px solid #e0e0e0;
+
+}
+
+/* 蓝色通用label */
+.common-blue {
+  border: 2px solid #fff;
+  background: #1989FA;
+  list-style: none;
+  color: #fff;
+}
+
+.common-blue::before {
+  bottom: -7px;
+  border-top: 10px solid #1989FA;
+  z-index: 1;
+}
+
+.common-blue::after {
+  bottom: -10px;
+  border-top: 10px solid #fff;
+
+}
+
+
+/* 多行label */
+.common-box .title {
+  /* text-align: center; */
+  font-size: 16px;
+  padding: 6px 0;
+  margin-bottom: 6px;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.common-box .title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+  width: 40px;
+  height: 10px;
+  background: #1989FA;
+  z-index: -1;
+
+}
+
+.main-line-box {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.main-line-box li {
+  min-width: 170px;
+  padding: 6px 20px 6px 0px;
+  position: relative;
+  cursor: pointer;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.main-line-box li:hover {
+  color: #1989FA;
+}
+
+.main-line-box li[meterid='null'] {
+  color: #fff !important;
+}
+
+.main-line-box li[meterid='null']::after {
+  display: none;
+}
+
+.main-line-box li.current {
+  color: #1989FA;
+}
+
+.main-line-box li::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  right: 0px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #efefef;
+  border-right: 1px solid #efefef;
+  transform: rotate(45deg);
+}
+
+/* 图表样式 */
+
+.chart-box {
+  height: 150px;
+  width: 300px;
+}
+
+
+/* 暗黑主题-正常主题 */
+
+.monitoring-center {
+  width: 123px;
+  height: 73px;
+  background-color: rgba(0, 2, 37, 0.7);
+  background-image: url(../assets/darkStyleImg/label-border-top.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center top;
+  padding-top: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  /* cursor: pointer; */
+}
+
+.monitoring-center .title {
+  color: #00C7E4;
+  position: relative;
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+.monitoring-center .title::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00C7E4;
+  position: absolute;
+  left: 8px;
+  top: 6px;
+}
+
+.monitoring-center table {
+  font-size: 12px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.monitoring-center table tr>td:last-of-type {
+  text-align: right
+}
+
+.monitoring-center td.warning {
+  color: #FF3B7B;
+}
+
+/* dark主题公共箭头样式 */
+.arrow {
+  width: 18px;
+  position: absolute;
+  bottom: -48px;
+  left: calc(50% - 9px);
+  animation: mymove 1s infinite;
+  -webkit-animation: mymove 1s infinite;
+  /* Safari 和 Chrome */
+}
+
+@keyframes mymove {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* dark 危险主题label */
+.dark-danger {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 900;
+  padding: 16px 46px;
+  position: absolute;
+  top: -300px;
+  left: -100px;
+  /* background: url(./attention_2@2x.png) no-repeat center center; */
+  background: url(../assets/darkStyleImg/attention_2@2x.png) no-repeat center center;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+
+/* 暗黑主题 主体建筑 */
+.main-building .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 177, 255, .2);
+  background: #00B1FF;
+  background-clip: padding-box;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.main-building .dot::before {
+  content: '';
+  width: 40px;
+  transform: rotate(-60deg);
+  transform-origin: left center;
+  border-top: 1px solid #00B1FF;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+}
+
+.main-building .dot::after {
+  content: '';
+  width: 20px;
+  border-top: 1px solid #00B1FF;
+  position: absolute;
+  left: 23.6px;
+  top: -33.5px;
+}
+
+.main-building {
+  position: absolute;
+  left: 600px;
+  top: 100px;
+}
+
+.main-building .content-box {
+  width: 144px;
+  height: 58px;
+  /* background: url(../assets/darkStyleImg/Financial_Center.png) no-repeat center center;
+  background-size: 100%; */
+  position: absolute;
+  left: 41px;
+  top: -62px;
+  cursor: pointer;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include shared/htmlHeader.ejs %>
+    <link rel="stylesheet" href="css/outdoor.css">
+
+	<body id="parent">
+    <!-- 复位 -->
+    <img class="reset" src="assets/icons/icon_huanyuan.svg" alt="">
+    <!-- 全屏切换按钮 -->
+    <img class="toggle-screen" src="assets/icons/icon_max.svg" alt="">
+    <!--图表面板 --> 
+    <div class="chart-box">
+        <div class="line"></div>
+        <div class="header">
+            <p>
+              <span class="title">热处理工厂</span>
+              <span class="details">详情></span>
+            </p>
+         </div>
+        <div class="wrap">
+          
+           <!--仪表盘 -->
+           <div id="main-watch" style="width: 240px;height:220px;"></div>
+           <!--饼图 -->
+           <div id="main-pie" style="width: 240px;height:260px;"></div>
+           <!--条形图 -->
+           <div id="main-bar" style="width: 240px;height:250px;">
+           </div>
+           <!--条形图 每条柱形图名称 -->
+           <div class="barTitle">
+
+           </div>
+           
+        </div>
+    </div>
+    <div class="bottom-tabs">
+    <img class="icon-unfold" src="assets/icons/icon_packup.svg" alt="">
+      <div name="KeyM">
+      <img src="assets/icons/icon_youguanzhuangtai.svg" alt="">
+       <p>油罐状态</p>
+      </div>
+      <div name="KeyA">
+      <img src="assets/icons/icon_famenzhuangtai.svg" alt="">
+       <p>阀门状态</p>
+      </div>
+      <div name="KeyE">
+      <img src="assets/icons/icon_bengzhaungtai.svg" alt="">
+       <p>泵状态</p>
+      </div>
+      <div name="KeyS">
+      <img src="assets/icons/icon_zhibei.svg" alt="">
+       <p>植被环境</p>
+      </div>
+      <div name="Digit1">
+      <img src="assets/icons/icon_yinying.svg" alt="">
+       <p>投影</p>
+      </div>
+      <div name="Digit3">
+      <img src="assets/icons/icon_guandaoshusong.svg" alt="">
+       <p>管道输送</p>
+      </div>
+      <div name="Digit7">
+      <img src="assets/icons/icon_jiankong.svg" alt="">
+       <p>监控设备</p>
+      </div>
+      <div name="Digit6">
+      <img src="assets/icons/icon_youguancunchu.svg" alt="">
+       <p>油罐储量</p>
+      </div>
+      <div name="Digit2">
+      <img src="assets/icons/icon_zhushijiao.svg" alt="">
+       <p>返回主视角</p>
+      </div>
+      <div name="KeyR">
+      <img src="assets/icons/icon_xunhang.svg" alt="">
+       <p>巡航检查</p>
+      </div>
+    </div>
+    
+        <div id="progressbar"></div>
+
+        <div id="container"></div>
+
+        <script src="<%= siteDir %>/pipelines/p_electricPowerLines.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_rainDrainPipes.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_streetLightPowerLines.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_compressedAirPipes.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_waterSupplyPipes.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_naturalGasPipes.js"></script>
+        <script src="<%= siteDir %>/pipelines/p_sewerPipes.js"></script>
+        <script src="<%= siteDir %>/featuresConfig.js"></script>
+        <!-- <script src="jquery.min.js"></script> -->
+        <!-- <script src="echarts.min.js"></script> -->
+        <script src="Level1Application.js"></script>
+        
+        
+        <script src="outdoor.js"></script>
+        
+        
+        
+        <!-- Main sidebar area:
+        <div class="row" id="mainSidebar" style="position: absolute; pointer-events: fill; height: 0;">
+            <div class="column unselectable" style="float: left; width: 1px; height: 0px; padding: 0px; background-color: rgba(0, 0, 0, 0);">
+
+                <!-- Home & hide sidebar:
+                <!--
+                <div class="row" id="homeAndHideSidebar">
+                    <div style="width: 213px; height: 0px; margin-top: 20px; margin-left: 20px; background-color: rgba(0, 255, 0, 1);">
+                        <div class="column" id="homeButton" style="cursor: pointer; float: left; width: 56px; height: 40px; padding-top: 10px; border: none; background-color: #39A5F7; border-radius: 10px 0 0 10px;" onclick="myApp.cameraFeature.flyToHomePosition(1)">
+                            <img src="assets/home.png" id="homeButtonIcon" style="display: block; margin-left: auto; margin-right: auto; height: 30px;"></img>
+                        </div>
+                        <div class="column" id="mainButtonsToggleButton" style="cursor: pointer; float: left; width: 56px; height: 40px; padding-top: 10px; border-left: 0.5px solid #72c1ff; background-color: #39A5F7; border-radius: 0 10px 10px 0;" onclick="toggleMainButtonsPanel()">
+                            <img id="buttonsPanelToggleIcon" src="assets/up.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px;"></img>
+                        </div>
+                    </div>
+                </div>-->
+
+              
+        <!--                </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+	</body>
+</html>

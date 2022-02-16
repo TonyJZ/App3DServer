@@ -1,0 +1,39 @@
+﻿base_floor.FBX (floor, walls, glasses, doors)
+
+batterys.glb (25 battery boxes in right side room)
+{'battery001' to 'battery025'}
+
+cab01.glb (fully functional cabinet #01 with servers)
+{'server_1u', 'server_2u', 'server_4u'}
+
+cab02.glb (fully functional cabinet #02 with exchangers)
+{'exchanger01' to 'exchanger06'}
+
+cabinets.glb (120 empty cabinets in 12 groups)
+{'Group001':{'cabinet001' to 'cabinet010'},
+ 'Group002':{'cabinet011' to 'cabinet020'},
+ ...
+ 'Group011':{'cabinet101' to 'cabinet110'},
+ 'Group012':{'cabinet111' to 'cabinet120'} }
+
+camera.glb (7 cameras)
+{'camera001' to 'camera007'}
+
+flood_detector.glb (3 flood detectors)
+{'flood_detector001' to 'flood_detector003'}
+
+smoke_detector.glb (5 smoke detectors)
+{'smoke_detector001' to 'smoke_detector005'}
+
+temp_humidity_monitor.glb (3 temperture & humidity monitors)
+{'temp_humidity_monitor001' to 'temp_humidity_monitor003'}
+
+UPS_room.glb (4 UPS and 4 distribution cabinets)
+{'UPS001' to 'UPS004',
+ 'distribution_cabinet001' to 'distribution_cabinet004'}
+
+cable01.FBX (a green cable connect from cab01 to cab02)
+
+floor_copy.glb (a copy of floor, include base_floor and a part of empty cabinets)
+
+server_blocks.FBX (green boxes to indicate servers in use)

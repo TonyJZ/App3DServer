@@ -1,0 +1,162 @@
+{
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5123,
+            "count" : 57792,
+            "max" : [
+                38295
+            ],
+            "min" : [
+                0
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 38296,
+            "max" : [
+                2.0446598529815674,
+                2.1638574600219727,
+                1.1090959310531616
+            ],
+            "min" : [
+                -0.050999999046325684,
+                -3.146089113670314e-07,
+                -1.4912405014038086
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 38296,
+            "max" : [
+                0.9941428899765015,
+                0.9939656853675842,
+                0.9939193725585938
+            ],
+            "min" : [
+                -0.9939790368080139,
+                -1.0,
+                -1.0
+            ],
+            "type" : "VEC3"
+        }
+    ],
+    "asset" : {
+        "generator" : "Khronos Blender glTF 2.0 exporter",
+        "version" : "2.0"
+    },
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 115584,
+            "byteOffset" : 0,
+            "target" : 34963
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 459552,
+            "byteOffset" : 115584,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 459552,
+            "byteOffset" : 575136,
+            "target" : 34962
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1034688,
+            "uri" : "test.bin"
+        }
+    ],
+    "materials" : [
+        {
+            "name" : "Material.002",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.24297164380550385,
+                    0.24297164380550385,
+                    0.24297164380550385,
+                    1.0
+                ],
+                "roughnessFactor" : 0.08181816339492798
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "CUPlane.001",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "NORMAL" : 2,
+                        "POSITION" : 1
+                    },
+                    "indices" : 0,
+                    "material" : 0
+                }
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "translation" : [
+                14.321722030639648,
+                5.34366512298584,
+                6.5076398849487305
+            ]
+        },
+        {
+            "name" : "Lamp",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558802962303162,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "scale" : [
+                1.0,
+                1.0,
+                0.9999999403953552
+            ],
+            "translation" : [
+                8.511104583740234,
+                5.903861999511719,
+                -1.0054539442062378
+            ]
+        },
+        {
+            "mesh" : 0,
+            "name" : "Plane",
+            "scale" : [
+                2.0992324352264404,
+                2.0992324352264404,
+                2.0992324352264404
+            ]
+        }
+    ],
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                2,
+                1,
+                0
+            ]
+        }
+    ]
+}

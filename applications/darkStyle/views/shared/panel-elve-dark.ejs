@@ -1,0 +1,247 @@
+<!-- 电梯故障 -->
+<style>
+  .panel-elve {
+    width:530px;
+    height:900px;
+    position: absolute;
+    top:0;
+    right:0;
+    background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,16,67,1) 100%);
+    padding:40px 0 40px 159px;
+    box-sizing:border-box;
+    transform:scale(0.8,0.8);
+    transform-origin:top right;
+    z-index:99;
+    display:none;
+  }
+  .panel-elve .panel-box {
+    width:315px;
+    height:100%;
+    /* background:red; */
+    overflow:auto;
+    box-sizing:border-box;
+  }
+  .panel-elve .panel-box .title {
+    height:128px;
+    background:url(./assets/darkStyleImg/panel-title-bg.png) no-repeat center center / contain;
+    margin-bottom:10px;
+    position:relative;
+  }
+  .panel-elve .panel-box .title .text {
+    font-size:18px;
+    color:#fff;
+    width:222px;
+    height:46px;
+    line-height:46px;
+    text-align:center;
+    position:absolute;
+    top:44px;
+    right:12px;
+    
+  }
+  .panel-elve .panel-box .title .sub-text {
+    font-size:9px;
+    color:#00C7E4;
+    min-width:222px;
+    text-align:center;
+    position:absolute;
+    top:94px;
+    right:12px;
+  }
+  .panel-elve .building-info {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+  }
+  .panel-elve .building-info>div>p:first-of-type {
+    font-size:26px;
+    line-height:180%;
+    color:#00C7E4;
+  }
+  .panel-elve .building-info>div>p:last-of-type {
+    font-size:16px;
+    color:#fff;
+  }
+  .panel-elve .accident-description {
+    height:170px;
+    /* box-sizing:border-box; */
+    background-color:rgba(0,0,0,0.2);
+    background-image:url(./assets/darkStyleImg/panel-border-bottom.png), url(./assets/darkStyleImg/panel-border-top.png);
+    background-repeat:no-repeat,no-repeat;
+    background-position:center bottom,center top;
+    background-size:contain; 
+  }
+  .panel-elve .accident-description {
+    display:none;
+    padding:8px 0;
+    margin-bottom:17px;
+  }
+  .panel-elve .accident-description-title {
+    padding:6px 17px;
+    font-size:14px;
+    color:#00C7E4;
+    vertical-align:middle;
+  }
+  .panel-elve .accident-description-title img,span {
+    vertical-align:middle;
+  }
+  .panel-elve .accident-description-content {
+    color:#fff;
+    font-size:12px;
+    padding:5px 0 10px 14px;
+    border-bottom:1px solid #BFBFBF;
+    width:266px;
+    margin:0 auto;
+  }
+  .panel-elve .accident-description-content>p {
+    line-height:28px; 
+  }
+  .panel-elve .casualties-info {
+    width:266px;
+    margin:0 auto;
+    overflow:hidden;
+    color:#fff;
+  }
+  .panel-elve .casualties-info p{
+    float:left;
+    width:50%;
+    padding:12px 14px;
+    box-sizing:border-box;
+  }
+  
+  .panel-elve .liaison-list {
+    height:130px;
+    border:none;
+    padding:0 14px;
+    overflow:auto;
+  }
+  .panel-elve .liaison-list table {
+    width:100%;
+    border-collapse:collapse;
+    
+  }
+  .panel-elve .liaison-list table td {
+    line-height:28px;
+    text-align:center;
+  }
+  .panel-elve .liaison-list table img {
+    margin:0;
+  }
+</style>
+
+<div class="panel-elve model_building_010">
+  <div class="panel-box">
+    <div class="title">
+      <p class="text">上海XX大厦</p>
+      <p class="sub-text">SHANGHAI XXX CENTER</p>
+      </div>
+    <!-- 建筑信息 -->
+    <div class="building-info">
+      <div>
+        <p>78m</p>
+        <p>建筑总高</p>
+      </div>
+      <div>
+        <p>26层</p>
+        <p>楼层数</p>
+      </div>
+      <div>
+        <p>6600m²</p>
+        <p>总建筑面积</p>
+      </div>
+    </div>
+    <!-- 事故描述 -->
+    <div class="accident-description line1">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/事故@2x.png" alt="">
+        <span>事故描述</span>
+      </div>
+      <div class="accident-description-content">
+        <p>事故类型：货梯长时间未运行</p>
+        <p>事故发生时间：8:25</p>
+        <p>
+          <span style="vertical-align:middle;">事故简述：3号货梯因超载，5人被围困</span>
+        </p>
+      </div>
+      <div class="casualties-info">
+        <p>围困人数：5人</p>
+        <p>受伤人数：暂无</p>
+      </div>
+    </div>
+    <!-- 监控数据 -->
+    <div class="accident-description line2">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/icon_jiankong@2x.png" alt="">
+        <span>现场监控数据</span>
+      </div>
+      <div class="accident-description-content" style="width:241px;height:115px;background:url(./assets/darkStyleImg/Bitmap@2x.png) no-repeat center center / contain;border:none;">
+        
+      </div>
+
+    </div>
+    <!-- 附近紧急联络员 -->
+    <div class="accident-description line3" style="margin-bottom:0;">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/icon_jinjilianxiren@2x.png" alt="">
+        <span>附近紧急联络员</span>
+      </div>
+      <div class="accident-description-content liaison-list">
+        <table>
+          <tr>
+            <td>消防</td>
+            <td>黎杰</td>
+            <td>360m</td>
+            <td>19252926954</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>医护</td>
+            <td>吕静</td>
+            <td>1200m</td>
+            <td>19976890235</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>环保</td>
+            <td>石霞</td>
+            <td>960m</td>
+            <td>19817519956</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>网络</td>
+            <td>沈敏</td>
+            <td>620m</td>
+            <td>19320625035</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $(function(){
+    let scalRate  = $(window).height()/900;
+    $(".panel-elve").css({transform:'scale('+scalRate+','+scalRate+')'});
+    
+    $(window).resize(function () {          //当浏览器大小变化时
+      let scalRate  = $(window).height()/900;
+      $(".panel-elve").css({transform:'scale('+scalRate+','+scalRate+')'});
+    });
+    
+  })
+
+</script>

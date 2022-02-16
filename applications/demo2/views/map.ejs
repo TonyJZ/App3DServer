@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include shared/htmlHeader.ejs %>
+
+	<body id="parent">
+        <div id="progressbar"></div>
+        <div id="container"></div>
+
+        <script src="../features/SelectionFeature.js"></script>
+        <script src="map/Application.js"></script>
+
+        <!-- Main sidebar area: -->
+        <div class="row" id="mainSidebar" style="position: absolute; pointer-events: fill; height: 0;">
+            <div class="column unselectable" style="float: left; width: 1px; height: 0px; padding: 0px; background-color: rgba(0, 0, 0, 0);">
+
+                <!-- Home & hide sidebar: -->
+                <div class="row" id="homeAndHideSidebar">
+                    <div style="width: 213px; height: 0px; margin-top: 20px; margin-left: 20px; background-color: rgba(0, 255, 0, 1);">
+                        <div class="column" style="cursor: pointer; float: left; width: 56px; height: 40px; padding-top: 10px; border: none; background-color: #39A5F7; border-radius: 10px 0 0 10px;" onclick="flyToHomePosition(2)">
+                            <img src="assets/home.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px;"></img>
+                        </div>
+                        <div class="column" style="cursor: default; float: left; width: 56px; height: 40px; padding-top: 10px; border-left: 0.5px solid #72c1ff; background-color: #39A5F7; border-radius: 0 10px 10px 0;">
+                            <img id="buttonsPanelToggleIcon" src="assets/down.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; opacity: 0.25;"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

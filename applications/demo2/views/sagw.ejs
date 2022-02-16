@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include shared/htmlHeader.ejs %>
+
+	<body id="parent">
+        <div id="progressbar"></div>
+        <script src="../../../features/EmergencyFeature.js"></script>
+        <script src="../../../features/CameraFeature.js"></script>
+        <script src="../../../features/EnergyCubeFeature.js"></script>
+        <script src="room1/Application.js"></script>
+        <script src="room1/interface.js"></script>
+
+        <div id="container"></div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="svgCont" height="100%" width="100%" style="position: absolute; pointer-events: none;"></svg>
+
+        <!-- Main sidebar area: -->
+        <div class="row" id="mainSidebar" style="position: absolute; pointer-events: fill; height: 0;">
+            <div class="column unselectable" style="float: left; width: 1px; height: 0px; padding: 0px; background-color: rgba(0, 0, 0, 0);">
+
+                <!-- Home & hide sidebar: -->
+                <div class="row" id="homeAndHideSidebar">
+                    <div style="width: 213px; height: 0px; margin-top: 20px; margin-left: 20px; background-color: rgba(0, 255, 0, 1);">
+                        <div class="column" id="homeButton" style="cursor: pointer; float: left; width: 56px; height: 40px; padding-top: 10px; border: none; background-color: #39A5F7; border-radius: 10px 0 0 10px;" onclick="myApp.cameraFeature.flyToHomePosition(1)">
+                            <img src="./assets/home.png" id="homeButtonIcon" style="display: block; margin-left: auto; margin-right: auto; height: 30px;"></img>
+                        </div>
+                        <div class="column" id="mainButtonsToggleButton" style="cursor: pointer; float: left; width: 56px; height: 40px; padding-top: 10px; border-left: 0.5px solid #72c1ff; background-color: #39A5F7; border-radius: 0 10px 10px 0;" onclick="toggleMainButtonsPanel()">
+                            <img id="buttonsPanelToggleIcon" src="./assets/up.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px;"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Buttons: -->
+                <div class="row" id="mainButtons" style="margin-top: 90px;">
+                    <div style="width: 223px; height: 1px; margin-top: 20px; margin-left: 20px; background-color: rgba(0, 0, 0, 0);">
+                        <!-- Decoration -->
+                        <div style="width: 100px; height: 4.5px; background-color: #39A5F7; position: absolute; margin-left: 61.5px; border-radius: 0 0 4.5px 4.5px;"></div>
+                        <!-- Row 1 -->
+                        <div class="column" id="button1" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; border-right: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95); border-radius: 10px 0 0 0;" onMouseOver="enteringHoverOverButton(1)" onMouseOut="leavingHoverOverButton(1)" onclick="buttonClicked(1)">
+                            <img src="./assets/1.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.monitor %></label>
+                        </div>
+                        <div class="column" id="button2" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95); border-radius: 0 10px 0 0;" onMouseOver="enteringHoverOverButton(2)" onMouseOut="leavingHoverOverButton(2)" onclick="buttonClicked(2)">
+                            <img src="./assets/2.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.energyUsage %></label>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="column" id="button3" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; border-right: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95);" onMouseOver="enteringHoverOverButton(3)" onMouseOut="leavingHoverOverButton(3)" onclick="buttonClicked(3)">
+                            <img src="./assets/3.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.moveObject %></label>
+                        </div>
+                        <div class="column" id="button4" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95);" onMouseOver="enteringHoverOverButton(4)" onMouseOut="leavingHoverOverButton(4)" onclick="buttonClicked(4)">
+                            <img src="./assets/4.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.showPipelines %></label>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="column" id="button5" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; border-right: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95);" onMouseOver="enteringHoverOverButton(5)" onMouseOut="leavingHoverOverButton(5)" onclick="buttonClicked(5)">
+                            <img src="./assets/5.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.emergency %></label>
+                        </div>
+                        <div class="column" id="button6" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-bottom: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95);" onMouseOver="enteringHoverOverButton(6)" onMouseOut="leavingHoverOverButton(6)" onclick="buttonClicked(6)">
+                            <img src="./assets/6.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.vegetation %></label>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="column" id="button7" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; border-right: 0.5px solid #E4E4E4; background-color: rgba(255, 255, 255, 0.95); border-radius: 0 0 0 10px;" onMouseOver="enteringHoverOverButton(7)" onMouseOut="leavingHoverOverButton(7)" onclick="buttonClicked(7)">
+                            <img src="./assets/7.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.dayNight %></label>
+                        </div>
+                        <div class="column" id="button8" style="cursor: pointer; float: left; padding: 20px; padding-top: 15px; width: 70px; height: 50px; background-color: rgba(255, 255, 255, 0.95); border-radius: 0 0 10px 0;" onMouseOver="enteringHoverOverButton(8)" onMouseOut="leavingHoverOverButton(8)" onclick="buttonClicked(8)">
+                            <img src="./assets/8.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; pointer-events: none;"></img>
+                            <label style="text-align: center; display: block; margin-top: 5px; margin-left: auto; margin-right: auto; pointer-events: none;"><%= strings.devices %></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

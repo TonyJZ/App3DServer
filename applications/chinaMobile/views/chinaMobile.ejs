@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% include shared/htmlHeader.ejs %>
+    <head>
+		<meta charset="UTF-8"/>
+		<!--<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />-->
+		<title>jQuery treeview</title>
+
+		<link rel="stylesheet" href="css/jquery.treeview.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src="js/jquery.treeview.js" type="text/javascript"></script>
+		<script src="js/echarts.common.min.js"></script>
+		<script src="js/demo.js" type="text/javascript"></script>
+		<script src="js/demoPureJS.js" type="text/javascript"></script>
+
+		<script type="text/javascript">
+            $(document).ready(function() {
+                $("#browser").treeview({
+                    toggle: function() {
+                        // console.log("%s was toggled.", $(this).find(">span").text());
+                    }
+                });
+            });
+        </script>
+	</head>
+
+	<body id="parent">
+        <div id="progressbar"></div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="svgCont" height="100%" width="100%" style="position: absolute; pointer-events: none;"></svg>
+
+        <!-- Main sidebar area: -->
+        <div class="row" id="mainSidebar" style="position: absolute; pointer-events: fill; height: 0; visibility: hidden;">
+            <div class="column" style="float: left; width: 1px; height: 0px; padding: 0px; background-color: rgba(0, 0, 0, 0);">
+
+                <!-- Home & hide sidebar: -->
+                <div class="row" id="homeAndHideSidebar">
+                    <div style="width: 213px; height: 0px; margin-top: 20px; margin-left: 20px; background-color: rgba(0, 255, 0, 1);">
+                        <div class="column" style="float: left; width: 56px; height: 40px; padding-top: 10px; border: none; background-color: #39A5F7; border-radius: 10px 0 0 10px;">
+                            <img src="assets/home.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; opacity: 0.25;"></img>
+                        </div>
+                        <div class="column" style="float: left; width: 56px; height: 40px; padding-top: 10px; border-left: 0.5px solid #72c1ff; background-color: #39A5F7; border-radius: 0 10px 10px 0;" onclick="">
+                            <img id="buttonsPanelToggleIcon" src="assets/down.png" style="display: block; margin-left: auto; margin-right: auto; height: 30px; opacity: 0.25;"></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+
+            <!-- Our APP3D container: -->
+            <div id="container"></div>
+
+			<div class="tree-box" id="treeBox">
+
+				<p class="title">设备索引 <span>x</span></p>
+				<div id="main">
+					<ul id="browser" class="filetree treeview-famfamfam">
+						<li><span class="folder">IDC可视化监控系统 </span>
+							<ul>
+								<li><span class="folder">2楼</span>
+									<ul>
+										<li><span name="UPS_room" class="file">UPS室</span>
+											<ul>
+												<li><span name="UPS001" class="file">UPS室-UPS-01</span></li>
+												<li><span name="UPS002" class="file">UPS室-UPS-02</span></li>
+												<li><span name="UPS003" class="file">UPS室-UPS-03</span></li>
+												<li><span name="UPS004" class="file">UPS室-UPS-04</span></li>
+												<li><span name="distribution_cabinet001" class="file">UPS室-配电柜1</span></li>
+												<li><span name="distribution_cabinet002" class="file">UPS室-配电柜2</span></li>
+												<li><span name="distribution_cabinet003" class="file">UPS室-配电柜3</span></li>
+												<li><span name="distribution_cabinet004" class="file">UPS室-配电柜4</span></li>
+												<!-- <li><span class="file">UPS室-UPS-05</span></li>
+												<li><span class="file">UPS室-UPS-06</span></li>
+												<li><span class="file">UPS室-UPS-07</span></li>
+												<li><span class="file">UPS室-UPS-01</span></li>
+												<li><span class="file">UPS室-UPS-02</span></li>
+												<li><span class="file">UPS室-烟感1</span></li>
+												<li><span class="file">UPS室-烟感2</span></li>
+												<li><span class="file">UPS室-蓄电池-01</span></li>
+												<li><span class="file">UPS室-蓄电池-02</span></li>
+												<li><span class="file">UPS室-蓄电池-03</span></li>
+												<li><span class="file">UPS室-蓄电池-04</span></li>												
+												<li><span class="file">温湿度传感器</span></li>
+												<li><span class="file">漏水绳04</span></li> -->
+											</ul>
+										</li>
+										<li><span name="battery_room" class="file">电池室</span>
+											<ul>
+												<li><span name="battery001" class="file">电池室-蓄电池-001</span></li>
+												<li><span name="battery002" class="file">电池室-蓄电池-002</span></li>
+												<li><span name="battery003" class="file">电池室-蓄电池-003</span></li>
+												<li><span name="battery004" class="file">电池室-蓄电池-004</span></li>
+												<li><span name="battery005" class="file">电池室-蓄电池-005</span></li>
+												<li><span name="battery006" class="file">电池室-蓄电池-006</span></li>
+												<li><span name="battery007" class="file">电池室-蓄电池-007</span></li>
+												<li><span name="battery008" class="file">电池室-蓄电池-008</span></li>
+												<li><span name="battery009" class="file">电池室-蓄电池-009</span></li>
+												<li><span name="battery010" class="file">电池室-蓄电池-010</span></li>
+												<li><span name="battery011" class="file">电池室-蓄电池-011</span></li>
+												<!-- <li><span name="battery012" class="file">电池室-蓄电池-012</span></li>
+												     <li><span name="battery013" class="file">电池室-蓄电池-013</span></li>
+												<li><span name="battery014" class="file">电池室-蓄电池-014</span></li> -->
+												<li><span name="battery015" class="file">电池室-蓄电池-015</span></li>
+												<li><span name="battery016" class="file">电池室-蓄电池-016</span></li>
+												<li><span name="battery017" class="file">电池室-蓄电池-017</span></li>
+												<li><span name="battery018" class="file">电池室-蓄电池-018</span></li>
+												<li><span name="battery019" class="file">电池室-蓄电池-019</span></li>
+												<li><span name="battery020" class="file">电池室-蓄电池-020</span></li>
+												<li><span name="battery021" class="file">电池室-蓄电池-021</span></li>
+												<li><span name="battery022" class="file">电池室-蓄电池-022</span></li>
+												<li><span name="battery023" class="file">电池室-蓄电池-023</span></li>
+												<li><span name="battery024" class="file">电池室-蓄电池-024</span></li>
+												<li><span name="battery025" class="file">电池室-蓄电池-025</span></li>
+											</ul>
+										</li>
+										<li><span name="meeting_room" class="file">会议室</span>
+											<ul>
+												<!-- <li><span class="file">会议室-摄像头01</span></li>
+												     <li><span class="file">会议室-监控室的普通空调</span></li> -->
+											</ul>
+										</li>
+										<li><span name="office_room" class="file">办公室</span>
+											<ul>
+												<!-- <li><span class="file">办公室1-三层的普通空调</span></li>
+												     <li><span class="file">门禁指纹机03</span></li>
+												<li><span class="file">门禁指纹机04</span></li>
+												<li><span class="file">门禁指纹机05</span></li> -->
+											</ul>
+										</li>
+										<!-- <li><span class="file">办公室2</span>
+											 <ul>
+												 <li><span name = "" class="file">办公室2-摄像头01</span></li>
+												 <li><span class="file">办公室2-摄像头02</span></li>
+												 <li><span class="file">办公室2-摄像头03</span></li>
+												 <li><span class="file">门禁指纹机09</span></li>
+											 </ul>
+										</li> -->
+										<!-- <li><span class="file">机房1</span>
+											 <ul>
+												 <li><span class="file">机房1-A组列头柜</span></li>
+												 <li><span class="file">机房1-B组列头柜</span></li>
+												 <li><span class="file">机房1-C组列头柜</span></li>
+												 <li><span class="file">机房1-D组列头柜</span></li>
+												 <li><span class="file">机房1-E组列头柜</span></li>
+												 <li><span class="file">机房1-F组列头柜</span></li>
+												 <li><span class="file">机房1-G组列头柜</span></li>
+												 <li><span class="file">机房1-H组列头柜</span></li>
+												 <li><span class="file">机房1-世图兹空调1</span></li>
+												 <li><span class="file">机房1-世图兹空调2</span></li>
+												 <li><span class="file">机房1-世图兹空调3</span></li>
+												 <li><span class="file">机房1-世图兹空调4</span></li>
+												 <li><span class="file">机房1-世图兹空调5</span></li>
+												 <li><span class="file">机房1-世图兹空调6</span></li>
+												 <li><span class="file">机房1-世图兹空调7</span></li>
+												 <li><span class="file">机房1-世图兹空调8</span></li>
+												 <li><span class="file">机房1-摄像头01</span></li>
+												 <li><span class="file">机房1-摄像头01</span></li>
+												 <li><span class="file">机房1-摄像头01</span></li>
+											 </ul>
+										</li> -->
+										<li><span name="cabinet_room" class="file">机房</span>
+											<ul>
+												<li><span name="cabinet_1" class="file">机房-A组列头柜01</span>
+													<ul>
+														<li><span name="server_1u" class="file">DELL PowerEdge 1U</span></li>
+														<li><span name="server_2u" class="file">DELL PowerEdge  2U</span></li>
+														<li><span name="server_4u" class="file">DELL PowerEdge  4U</span></li>
+													</ul>
+												</li>
+												<li><span name="cabinet_2" class="file">机房-B组列头柜01</span>
+													<ul>
+														<li><span name="exchanger01" class="file">交换机01</span></li>
+														<li><span name="exchanger02" class="file">交换机02</span></li>
+														<li><span name="exchanger03" class="file">交换机03</span></li>
+														<li><span name="exchanger04" class="file">交换机04</span></li>
+														<li><span name="exchanger05" class="file">交换机05</span></li>
+														<li><span name="exchanger06" class="file">交换机06</span></li>
+													</ul>
+												</li>
+												<li><span name="camera" class="file">监控摄像头</span>
+													<ul>
+														<li><span name="camera001" class="file">摄像头01</span></li>
+														<li><span name="camera001" class="file">摄像头02</span></li>
+														<li><span name="camera003" class="file">摄像头03</span></li>
+														<li><span name="camera004" class="file">摄像头04</span></li>
+														<li><span name="camera005" class="file">摄像头05</span></li>
+														<li><span name="camera006" class="file">摄像头06</span></li>
+														<li><span name="camera007" class="file">摄像头07</span></li>
+													</ul>
+												</li>
+												<li><span name="smoke_detector" class="file">烟感</span>
+													<ul>
+														<li><span name="smoke_detector001" class="file">烟感1</span></li>
+														<li><span name="smoke_detector002" class="file">烟感2</span></li>
+														<li><span name="smoke_detector003" class="file">烟感3</span></li>
+														<li><span name="smoke_detector004" class="file">烟感4</span></li>
+														<li><span name="smoke_detector005" class="file">烟感5</span></li>
+													</ul>
+												</li>
+												<li><span name="temp_humidity_monitor" class="file">温湿度传感器</span>
+													<ul>
+														<li><span name="temp_humidity_monitor001" class="file">温湿度传感器01</span></li>
+														<li><span name="temp_humidity_monitor002" class="file">温湿度传感器02</span></li>
+														<li><span name="temp_humidity_monitor003" class="file">温湿度传感器03</span></li>
+													</ul>
+												</li>
+												<li><span name="flood_detector" class="file">漏水绳</span>
+													<ul>
+														<li><span name="flood_detector001" class="file">漏水绳01</span></li>
+														<li><span name="flood_detector002" class="file">漏水绳02</span></li>
+														<li><span name="flood_detector003" class="file">漏水绳03</span></li>
+													</ul>
+												</li>
+												<!-- <li><span class="file">机房2-C组列头柜</span></li>
+												     <li><span class="file">机房2-D组列头柜</span></li> -->
+											</ul>
+										</li>
+										<!-- <li><span class="file">监控室</span>
+											 <ul>
+												 <li><span class="file">监控室-摄像头01</span></li>
+												 <li><span class="file">监控室-摄像头02</span></li>
+												 <li><span class="file">监控室-摄像头03</span></li>
+											 </ul>
+										</li> -->
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="side-line" id="sideLine">
+				<div class="icon" title="设备索引">
+				</div>
+			</div>
+			<!--底部栏-->
+			<div class="footer-box" id="footerBox">
+				<div id="">
+					<span>机房-机柜</span>
+				</div>
+				<!-- <div id="">
+					监控设备数<br>
+					<span id="">
+						66
+					</span>
+				</div> -->
+				<div class="click-device-box">
+					<i>监控设备数</i>
+					<br>
+					<span id="">60</span>
+				</div>
+				<div class="click-chart-box">
+					<i>资产总数</i>
+					<span id="">
+						1
+					</span>
+				</div>
+				<div class="click-table-box">
+					<i>资产警告</i><br>
+					<span id="">
+						0
+					</span>
+				</div>
+				<div class="click-table-box">
+					<i>环控警告</i><br>
+					<span id="">
+						0
+					</span>
+				</div>
+				<div class="click-table-box">
+					<i>网管警告</i><br>
+					<span id="">
+						0
+					</span>
+				</div>
+				<div class="click-storage-box bigger">
+					<i>机柜空间(U)</i><br />
+					<p class="line">
+						<span></span>
+					</p>
+					<p>总数：3360</p>
+					<p class="bottom-p">可用：2741</p>
+
+				</div>
+				<div class="click-energy-box bigger">
+					<i>功耗统计(KW)</i><br />
+					<p class="line line1">
+						<span></span>
+					</p>
+					<p>总数：4000</p>
+					<p class="bottom-p">可用：2114</p>
+				</div>
+			</div>
+			<!--图表弹窗-->
+			<div class="dialog-box chart-box" id="chartBox">
+				<div class="dialog-header">
+					<i>标 题</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<div id="charts" style="width: 100%;height:224px;"></div>
+				</div>
+			</div>
+
+			<!--表格 弹窗-->
+			<div class="dialog-box table-box" id="tableBox">
+				<div class="dialog-header">
+					<i>标 题</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<table class="table">
+						<tr>
+							<th>级别</th>
+							<th>告警内容</th>
+							<th>告别详情</th>
+							<th>发生时间</th>
+							<th>发生值</th>
+						</tr>
+						<tr>
+							<td>三级</td>
+							<td>内存利用率大于90</td>
+							<td>内存利用率大于85,当前发生值为：93</td>
+							<td>2018-09-21 12:03:23</td>
+							<td>95</td>
+						</tr>
+						<tr>
+							<td>三级</td>
+							<td>内存利用率大于90</td>
+							<td>内存利用率大于85,当前发生值为：93</td>
+							<td>2018-09-21 12:03:23</td>
+							<td>95</td>
+						</tr>
+						<tr>
+							<td>三级</td>
+							<td>内存利用率大于90</td>
+							<td>内存利用率大于85,当前发生值为：93</td>
+							<td>2018-09-21 12:03:23</td>
+							<td>95</td>
+						</tr>
+						<tr>
+							<td>三级</td>
+							<td>内存利用率大于90</td>
+							<td>内存利用率大于85,当前发生值为：93</td>
+							<td>2018-09-21 12:03:23</td>
+							<td>95</td>
+						</tr>
+					</table>
+				</div>
+				<div class="dialog-footer">
+					<input type="checkbox" name="a" id="a" value="" />
+					<label for="a">一级</label>
+					<input type="checkbox" name="b" id="b" value="" />
+					<label for="b">二级</label>
+					<input type="checkbox" name="c" id="c" value="" />
+					<label for="c">三级</label>
+					<div class="btn-box">
+						<button>首页</button>
+						<span><<</span>
+						           <input type="text" value="1" />
+						           <span>>></span>
+						<button>尾页</button>
+					</div>
+				</div>
+			</div>
+			<!--机柜空间 弹窗-->
+			<div class="dialog-box percent-box" id="percentBox">
+				<div class="dialog-header">
+					<i>标 题</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<div class="percent-text">
+						18.42%
+					</div>
+					<ul>
+						<li>
+							<p>总容量(u)</p>
+							<p>3360</p>
+						</li>
+						<li>
+							<p>已占用(u)</p>
+							<p>619</p>
+						</li>
+						<li>
+							<p>剩余(u)</p>
+							<p>2741</p>
+						</li>
+					</ul>
+				</div>
+				<div class="dialog-footer">
+					<ul>
+						<li>
+							<span class="green-squr">
+								
+							</span>
+							<span>
+								0%-25%
+							</span>
+						</li>
+						<li>
+							<span class="yellow-squr">	
+							</span>
+							<span>
+								25%-50%
+							</span>
+						</li>
+						<li>
+							<span class="orange-squr">
+							</span>
+							<span>
+								50%-75%
+							</span>
+						</li>
+						<li>
+							<span class="red-squr">
+								
+							</span>
+							<span>
+								75%-100%
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--功耗 弹窗-->
+			<div class="dialog-box energy-box" id="energyBox">
+				<div class="dialog-header">
+					<i>标 题</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<div class="percent-text">
+						47.15%
+					</div>
+					<ul>
+						<li>
+							<p>总功耗(kw)</p>
+							<p>4000</p>
+						</li>
+						<li>
+							<p>已使用(kw)</p>
+							<p>1886</p>
+						</li>
+						<li>
+							<p>剩余(kw)</p>
+							<p>2114</p>
+						</li>
+					</ul>
+				</div>
+				<div class="dialog-footer">
+					<ul>
+						<li>
+							<span class="green-squr">
+							</span>
+							<span>
+								0%-25%
+							</span>
+						</li>
+						<li>
+							<span class="yellow-squr">	
+							</span>
+							<span>
+								25%-50%
+							</span>
+						</li>
+						<li>
+							<span class="orange-squr">
+							</span>
+							<span>
+								50%-75%
+							</span>
+						</li>
+						<li>
+							<span class="red-squr">
+							</span>
+							<span>
+								75%-100%
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+            <!-- Cabinet A type boxes -->
+			<div class="dialog-box tab-box cabinetA" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+						<li>轨迹</li>
+						<li>链路</li>
+						<li>所装应用</li>
+						<li>任务</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>服务器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>42u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-cab-type0</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>8kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>60kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>机房1-A组列头柜</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>30u</span>
+										</li>
+										<li>
+											<span>保修年限</span>
+											<span>年</span>
+										</li>
+										<li>
+											<span>标签编号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购人</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购金额</span>
+											<span>元</span>
+										</li>
+										<li>
+											<span>购买日期</span>
+											<span></span>
+										</li>
+										<li>
+											<span>供应商</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="root-title">
+										<span class="root-icon">
+											-
+										</span>
+										归属状态
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>所属客户</span>
+											<span>
+												<select name="">
+													<option value="">请选择</option>
+							                        <!-- 						<option value="a">永拓</option> -->
+													<option value="b">电信</option>
+												</select>
+											</span>
+											<span id="">
+												<button>保存</button>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>CPU利用率</span>
+											<span>50%</span>
+										</li>
+										<li>
+											<span>内存利用率</span>
+											<span>70%</span>
+										</li>
+										<li>
+											<span>网络接口入流量</span>
+											<span>6048kbps</span>
+										</li>
+										<li>
+											<span>网络接口出流量</span>
+											<span>1235kbps</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- Cabinet B type boxes -->
+			<div class="dialog-box tab-box cabinetB" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+						<li>轨迹</li>
+						<li>链路</li>
+						<li>所装应用</li>
+						<li>任务</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>服务器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-cab-type0</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>8kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>60kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>机房-B组列头柜01</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>50u</span>
+										</li>
+										<li>
+											<span>保修年限</span>
+											<span>年</span>
+										</li>
+										<li>
+											<span>标签编号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购人</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购金额</span>
+											<span>元</span>
+										</li>
+										<li>
+											<span>购买日期</span>
+											<span></span>
+										</li>
+										<li>
+											<span>供应商</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="root-title">
+										<span class="root-icon">
+											-
+										</span>
+										归属状态
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>所属客户</span>
+											<span>
+												<select name="">
+													<option value="">请选择</option>
+							                        <!-- 						<option value="a">永拓</option> -->
+													<option value="b">电信</option>
+												</select>
+											</span>
+											<span id="">
+												<button>保存</button>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>CPU利用率</span>
+											<span>80%</span>
+										</li>
+										<li>
+											<span>内存利用率</span>
+											<span>60%</span>
+										</li>
+										<li>
+											<span>网络接口入流量</span>
+											<span>6048kbps</span>
+										</li>
+										<li>
+											<span>网络接口出流量</span>
+											<span>1235kbps</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div><!-- Dell PowerEdge type boxes -->
+			<div class="dialog-box tab-box dellPowerEdge" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+						<li>轨迹</li>
+						<li>链路</li>
+						<li>所装应用</li>
+						<li>任务</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span>Dell</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>服务器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>1kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>8kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>Dell PowerEdge X5</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>保修年限</span>
+											<span>年</span>
+										</li>
+										<li>
+											<span>标签编号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购人</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购金额</span>
+											<span>元</span>
+										</li>
+										<li>
+											<span>购买日期</span>
+											<span></span>
+										</li>
+										<li>
+											<span>供应商</span>
+											<span>Appropolis</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="root-title">
+										<span class="root-icon">
+											-
+										</span>
+										归属状态
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>所属客户</span>
+											<span>
+												<select name="">
+													<option value="">请选择</option>
+							                        <!-- 						<option value="a">永拓</option> -->
+													<option value="b">电信</option>
+												</select>
+											</span>
+											<span id="">
+												<button>保存</button>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>CPU利用率</span>
+											<span>50%</span>
+										</li>
+										<li>
+											<span>内存利用率</span>
+											<span>70%</span>
+										</li>
+										<li>
+											<span>网络接口入流量</span>
+											<span>6048kbps</span>
+										</li>
+										<li>
+											<span>网络接口出流量</span>
+											<span>1235kbps</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			</div><!-- Switch type boxes -->
+			<div class="dialog-box tab-box switch" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+						<li>轨迹</li>
+						<li>链路</li>
+						<li>所装应用</li>
+						<li>任务</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>服务器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>1kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>10kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>Dell PowerEdge X5</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>20u</span>
+										</li>
+										<li>
+											<span>保修年限</span>
+											<span>年</span>
+										</li>
+										<li>
+											<span>标签编号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购人</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购金额</span>
+											<span>元</span>
+										</li>
+										<li>
+											<span>购买日期</span>
+											<span></span>
+										</li>
+										<li>
+											<span>供应商</span>
+											<span>Appropolis</span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="root-title">
+										<span class="root-icon">
+											-
+										</span>
+										归属状态
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>所属客户</span>
+											<span>
+												<select name="">
+													<option value="">请选择</option>
+							                        <!-- 						<option value="a">永拓</option> -->
+													<option value="b">电信</option>
+												</select>
+											</span>
+											<span id="">
+												<button>保存</button>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>CPU利用率</span>
+											<span>20%</span>
+										</li>
+										<li>
+											<span>内存利用率</span>
+											<span>30%</span>
+										</li>
+										<li>
+											<span>网络接口入流量</span>
+											<span>6048kbps</span>
+										</li>
+										<li>
+											<span>网络接口出流量</span>
+											<span>1235kbps</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--tab栏弹窗-->
+			<div class="dialog-box tab-box default" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+						<li>轨迹</li>
+						<li>链路</li>
+						<li>所装应用</li>
+						<li>任务</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>服务器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>8kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>60kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>IBM X3850 X5</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>30u</span>
+										</li>
+										<li>
+											<span>保修年限</span>
+											<span>年</span>
+										</li>
+										<li>
+											<span>标签编号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购人</span>
+											<span></span>
+										</li>
+										<li>
+											<span>采购金额</span>
+											<span>元</span>
+										</li>
+										<li>
+											<span>购买日期</span>
+											<span></span>
+										</li>
+										<li>
+											<span>供应商</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="root-title">
+										<span class="root-icon">
+											-
+										</span>
+										归属状态
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>所属客户</span>
+											<span>
+												<select name="">
+													<option value="">请选择</option>
+							                        <!-- 						<option value="a">永拓</option> -->
+													<option value="b">电信</option>
+												</select>
+											</span>
+											<span id="">
+												<button>保存</button>
+											</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>CPU利用率</span>
+											<span>50%</span>
+										</li>
+										<li>
+											<span>内存利用率</span>
+											<span>70%</span>
+										</li>
+										<li>
+											<span>网络接口入流量</span>
+											<span>6048kbps</span>
+										</li>
+										<li>
+											<span>网络接口出流量</span>
+											<span>1235kbps</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--tab栏弹窗-->
+			<div class="dialog-box tab-box xdc" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>状态</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span>
+													
+											</span>
+									</li>
+									<li>
+											<span>设备状态上架</span>
+											<span>上架</span>
+									</li>
+									<li>
+											<span>设备厂家</span>
+											<span>Appropolis</span>
+									</li>
+									<li>
+											<span>设备类型</span>
+											<span>电源/蓄电池</span>
+									</li>
+									<li>
+											<span>占U数量u</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>设备型号</span>
+											<span>app-bat-type0</span>
+									</li>
+									<li>
+											<span>额定功率kw</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>重量kg</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>设备名称</span>
+											<span>
+													电源-蓄电池</span>
+									</li>
+									<li>
+											<span>
+													U位u</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>
+													保修年限年</span>
+											<span>
+													1</span>
+									</li>
+									<li>
+											<span>
+													标签编号</span>
+											<span>
+													battery
+											</span>
+									</li>
+									<li>
+											<span>
+													采购人</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>
+													采购金额元</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>
+													购买日期</span>
+											<span>
+
+											</span>
+									</li>
+									<li>
+											<span>
+													供应商</span>
+											<span>
+													Appropolis</span>
+									</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>电源输出配置</span>
+											<span>480V / 50A</span>
+										</li>
+										<li>
+											<span>电源运作状态</span>
+											<span>100%</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!--UPS栏弹窗-->
+			<div class="dialog-box tab-box ups" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span>
+												
+											</span>
+										</li>
+										<li>
+											<span>设备状态上架</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家</span>
+											<span>Appropolis</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>电源/UPS设备</span>
+										</li>
+										<li>
+											<span>占U数量u</span>
+											<span>
+			
+											</span>
+										</li>
+										<li>
+											<span>
+												设备型号</span>
+											<span>
+												app-ups-type0</span>
+										</li>
+										<li>
+											<span>
+												额定功率kw</span>
+											<span>
+												8kw</span>
+										</li>
+										<li>
+											<span>
+												重量</span>
+											<span>
+												200kg</span>
+										</li>
+										<li>
+											<span>
+												设备名称</span>
+											<span>
+												电源UPS</span>
+										</li>
+										<li>
+											<span>
+												U位u</span>
+											<span>
+			
+											</span>
+										</li>
+										<li>
+											<span>
+												保修年限年</span>
+											<span>
+												1年</span>
+										</li>
+										<li>
+											<span>
+												标签编号</span>
+											<span>
+												UPS室-UPS</span>
+										</li>
+										<li>
+											<span>
+												采购人</span>
+											<span>
+			
+											</span>
+										</li>
+										<li>
+											<span>
+												采购金额元</span>
+											<span>
+			
+											</span>
+										</li>
+										<li>
+											<span>
+												购买日期</span>
+											<span>
+			
+											</span>
+										</li>
+										<li>
+											<span>
+												供应商</span>
+											<span>
+												Appropolis</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>电池电流</span>
+											<span>12A</span>
+										</li>
+										<li>
+											<span>电池电压</span>
+											<span>48V</span>
+										</li>
+										<li>
+											<span>电池温度</span>
+											<span>30℃</span>
+										</li>
+										<li>
+											<span>电池容量</span>
+											<span>500AH</span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--摄像头栏弹窗-->
+			<div class="dialog-box tab-box sxt" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>配置</li>
+						<li>监控画面</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span>Appropolis</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>摄像头</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-cam-type0</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>30w</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>0.8kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>摄像头</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<div class="camera_config" style="display: block;">
+                                <form id="configForm" mothod="POST">
+                                    <table style="width:100%">
+                                        <tr>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <label>网络IP</label>
+                                                </p>
+                                            </th>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <input type="text" placeholder="请输入IP地址" name="config_ip" id="config_ip" value="10.0.0.1">
+                                                </p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <label>访问端口</label>
+                                                </p>
+                                            </th>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <input type="text" placeholder="请输入访问端口" name="config_port" id="config_port" value="80">
+                                                </p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <label>用户名</label>
+                                                </p>
+                                            </th>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <input type="text" placeholder="请输入用户名" name="config_user" id="config_user" value="admin">
+                                                </p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <label>密码</label>
+                                                </p>
+                                            </th>
+                                            <th align="right">
+                                                <p class="config_item">
+                                                    <input type="password" placeholder="请输入密码" name="config_password" id="config_password" value="admin123456">
+                                                </p>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </form>
+                                <div class="camera_config_bottom">
+                                    <button class="configSubmitBtn">保存</button>
+                                </div>
+                            </div>
+						</li>
+						<li>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.ibb.co/C6KN4bs/mainframe-migration-300x200.jpg" alt="mainframe-migration-300x200" > </p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--温度传感器栏弹窗-->
+			<div class="dialog-box tab-box wdcgq" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span>Appropolis</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>温湿度传感器</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-temhum-type2</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>8w</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>0.5kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>温湿度传感器</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>温度</span>
+											<span>45.51%</span>
+										</li>
+										<li>
+											<span>湿度</span>
+											<span>21.01度</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--烟感栏弹窗-->
+			<div class="dialog-box tab-box yg" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span>Appropolis</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>烟感</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-smoke-type0</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>20w</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>0.5kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>烟感</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>状态</span>
+											<span>正常</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--配电柜弹窗-->
+			<div class="dialog-box tab-box pdg" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>市配电柜</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span>4u</span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span></span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>8kw</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>60kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>配电柜</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span>30u</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>输出A相电流</span>
+											<span>41A</span>
+										</li>
+										<li>
+											<span>输出A相电压</span>
+											<span>220v</span>
+										</li>
+										<li>
+											<span>输出A相有功功率</span>
+											<span>120KW</span>
+										</li>
+										<li>
+											<span>输出A相无功功率</span>
+											<span>120KW</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--漏水绳弹窗-->
+			<div class="dialog-box tab-box lss" id="tabBox">
+				<div class="dialog-header">
+					<i>tab栏弹窗</i>
+					<span class="close">
+						x
+					</span>
+				</div>
+				<div class="dialog-body">
+					<ul class="tab-list">
+						<li class="selected">详情</li>
+						<li>监控</li>
+						<li>告警</li>
+					</ul>
+					<ul class="content-list">
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>自定义ID</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备状态</span>
+											<span>上架</span>
+										</li>
+										<li>
+											<span>设备厂家
+											</span>
+											<span>Appropolis</span>
+										</li>
+										<li>
+											<span>设备类型</span>
+											<span>漏水绳</span>
+										</li>
+										<li>
+											<span>占U数量</span>
+											<span></span>
+										</li>
+										<li>
+											<span>设备型号</span>
+											<span>app-flood-type1</span>
+										</li>
+										<li>
+											<span>额定功率</span>
+											<span>50w</span>
+										</li>
+										<li>
+											<span>重量</span>
+											<span>6kg</span>
+										</li>
+										<li>
+											<span>设备名称</span>
+											<span>漏水绳</span>
+										</li>
+										<li>
+											<span>U位</span>
+											<span></span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li class="selected-content">
+							<ul class="root-list">
+								<li>
+									<div class="root-title">
+										<span class="root-icon">-</span>
+										基础信息
+									</div>	
+									<ul class="sub-list">
+										<li>
+											<span>状态</span>
+											<span>正常</span>
+										</li>
+									</ul>
+								</li>		
+							</ul>
+						</li>
+						<li>
+							<ul class="sub-list"><li><span>无数据</span></li></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+        <!-- These are placed here on purpose, as a quick fix for a dependency problem: -->
+        <script src="CabinetFeature.js"></script>
+        <script src="FloorsFeature.js"></script>
+		<script src="TransformFeature.js"></script>
+		<script src="../features/EmergencyFeature.js"></script>
+		<script src="../features/EnergyCubeFeature.js"></script>
+		<script src="../features/SelectionFeature.js"></script>
+        <script src="energyCubeConfig.js"></script>
+        <script src="Application.js"></script>
+		<!--<script src="../demo2/interface.js"></script>-->
+	</body>
+</html>

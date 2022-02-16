@@ -1,0 +1,298 @@
+<!-- 人流密度预警 -->
+<style>
+  .panel-density.model_building_009 {
+    width:530px;
+    height:900px;
+    position: absolute;
+    top:0;
+    right:0;
+    background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,16,67,1) 100%);
+    padding:40px 0 40px 159px;
+    box-sizing:border-box;
+    transform:scale(0.8,0.8);
+    transform-origin:top right;
+    z-index:99;
+    display:none;
+  }
+  .panel-density .panel-box {
+    width:315px;
+    height:100%;
+    /* background:red; */
+    overflow:auto;
+    box-sizing:border-box;
+  }
+  .panel-density .accident-description {
+    height:170px;
+    /* box-sizing:border-box; */
+    background-color:rgba(0,0,0,0.2);
+    background-image:url(./assets/darkStyleImg/panel-border-bottom.png), url(./assets/darkStyleImg/panel-border-top.png);
+    background-repeat:no-repeat,no-repeat;
+    background-position:center bottom,center top;
+    background-size:contain; 
+  }
+  .panel-density .accident-description {
+    display:none;
+    padding:8px 0;
+    margin-bottom:17px;
+  }
+  .panel-density .accident-description-title {
+    padding:6px 17px;
+    font-size:14px;
+    color:#00C7E4;
+    vertical-align:middle;
+  }
+  .panel-density .accident-description-title img,span {
+    vertical-align:middle;
+  }
+  .panel-density .accident-description-content {
+    color:#fff;
+    font-size:12px;
+    padding:5px 0 10px 14px;
+    border-bottom:1px solid #BFBFBF;
+    width:266px;
+    margin:0 auto;
+  }
+  .panel-density .accident-description-content>p {
+    line-height:28px; 
+  }
+  .panel-density .casualties-info {
+    width:266px;
+    margin:0 auto;
+    overflow:hidden;
+    color:#fff;
+  }
+  .panel-density .casualties-info p{
+    float:left;
+    width:50%;
+    padding:12px 14px;
+    box-sizing:border-box;
+  }
+  
+  .panel-density .liaison-list {
+    height:130px;
+    border:none;
+    padding:0 14px;
+    overflow:auto;
+  }
+  .panel-density .liaison-list table {
+    width:100%;
+    border-collapse:collapse;
+    
+  }
+  .panel-density .liaison-list table td {
+    line-height:28px;
+    text-align:center;
+  }
+  .panel-density .liaison-list table img {
+    margin:0;
+  }
+  .panel-density .chartsOne {
+    height: 170px;
+    padding: 8px 0px;
+    background: url(./assets/darkStyleImg/panel-border-bottom.png) no-repeat
+        center bottom / contain,
+      url(./assets/darkStyleImg/panel-border-top.png) no-repeat center top /
+        contain;
+    margin-top: 17px;
+    background-color: rgba(0,0,0,0.4);
+    display:none;
+  }
+  .panel-density .accident-description-title {
+    padding: 6px 17px;
+    font-size: 14px;
+    color: #00c7e4;
+    vertical-align: middle;
+  }
+  .panel-density .accident-description-title img,
+  span {
+    vertical-align: middle;
+  }
+  .panel-density .first {
+    display:block;
+  }
+</style>
+
+<div class="panel-density model_building_009">
+  <div class="panel-box">
+    <!-- 事故描述 -->
+    <div class="accident-description first">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/事故@2x.png" alt="">
+        <span>事故描述</span>
+      </div>
+      <div class="accident-description-content">
+        <p>事故类型：人群许久未自行疏散，疑似集会游行</p>
+        <p>事故发生时间：19:52</p>
+        <p>
+          <span style="vertical-align:middle;">事故简述：XX路XX厂门口</span>
+        </p>
+      </div>
+      <div class="casualties-info">
+        <p>围困人数：暂无</p>
+        <p>受伤人数：暂无</p>
+      </div>
+    </div>
+    <!-- 监控数据 -->
+    <div class="accident-description line1">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/icon_jiankong@2x.png" alt="">
+        <span>现场监控数据</span>
+      </div>
+      <div class="accident-description-content" style="width:241px;height:115px;background:url(./assets/darkStyleImg/pic_jihui@2x.png) no-repeat center center / contain;border:none;">
+        
+      </div>
+
+    </div>
+    <!-- 附近紧急联络员 -->
+    <div class="accident-description line2" style="margin-bottom:0;">
+      <div class="accident-description-title">
+        <img style="height:14px;" src="./assets/darkStyleImg/icon_jinjilianxiren@2x.png" alt="">
+        <span>附近紧急联络员</span>
+      </div>
+      <div class="accident-description-content liaison-list">
+        <table>
+          <tr>
+            <td>消防</td>
+            <td>黎杰</td>
+            <td>360m</td>
+            <td>19252926954</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>医护</td>
+            <td>吕静</td>
+            <td>1200m</td>
+            <td>19976890235</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>环保</td>
+            <td>石霞</td>
+            <td>960m</td>
+            <td>19817519956</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+          <tr>
+            <td>网络</td>
+            <td>沈敏</td>
+            <td>620m</td>
+            <td>19320625035</td>
+            <td>
+              <img style="vertical-align:middle;height:14px;margin-left:10px" src="./assets/darkStyleImg/icon_phone@2x.png" alt="">
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+    </div>
+    <!-- echarts -->
+    <div class="chartsOne line3">
+        <div class="accident-description-title">
+            <img
+              style="height:14px;"
+              src="./assets/darkStyleImg/icon_tousu@2x.png"
+              alt=""
+            />
+            <span>接到投诉数据</span>
+          </div>
+        <!-- <p class="chartsTitle titleSeven">接到投诉数据</p> -->
+        <div id="mainSeven" style="width:90%;height:80%;margin:0 auto;"></div>
+      </div>
+  </div>
+</div>
+
+<script>
+var chartSeven = echarts.init(document.getElementById("mainSeven"));
+  var option7 = {
+    // backgroundColor: "rgba(0,0,0,0.4)",
+    // title: {
+    //   text: "本周超时访客楼层分布",
+    //   textStyle: { color: "#00C7E4", fontSize: 20 }
+    // },
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        // 坐标轴指示器，坐标轴触发有效
+        type: "line" // 默认为直线，可选为：'line' | 'shadow'
+      }
+    },
+    grid: {
+      left: "3%",
+      right: "4%",
+      bottom: "3%",
+      top: "20%",
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: "category",
+        data: [
+          "1-12",
+          "13-24",
+          "26-36",
+          "37-48",
+          "49-60",
+          "61-72",
+          "73-84",
+          "86-96"
+        ],
+        axisTick: {
+          alignWithLabel: true
+        },
+        axisLabel: { color: "rgba(255,255,255,0.4)" }
+      }
+    ],
+    yAxis: [
+      {
+        type: "value",
+        axisLabel: { color: "rgba(255,255,255,0.4)" },
+        splitLine: {
+          show: false
+        }
+      }
+    ],
+    series: [
+      {
+        type: "bar",
+        barWidth: "60%",
+        data: [36, 50, 60, 100, 120, 140, 160, 155],
+        itemStyle: {
+          normal: {
+            color: function(params) {
+              let colorList = [
+                "#00C7E4",
+                "#00C7E4",
+                "#00C7E4",
+                "#00C7E4",
+                "#8543E0",
+                "#8543E0",
+                "#8543E0",
+                "#8543E0"
+              ];
+              return colorList[params.dataIndex];
+            }
+          }
+        }
+      }
+    ]
+  };
+  chartSeven.setOption(option7, true);
+  $(function(){
+    let scalRate  = $(window).height()/900;
+    $(".panel-density").css({transform:'scale('+scalRate+','+scalRate+')'});
+    
+    $(window).resize(function () {          //当浏览器大小变化时
+      let scalRate  = $(window).height()/900;
+      $(".panel-density").css({transform:'scale('+scalRate+','+scalRate+')'});
+    });
+    
+  })
+
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include shared/htmlHeader.ejs %>
+<link rel="stylesheet" href="css/label.css">
+<script src="label.js"></script>
+<body id="parent">
+
+    <!-- 模型加载进度条 -->
+    <% include shared/progressbar.ejs %>
+    <% include shared/header-title.ejs %>
+    <% include shared/cruise.ejs %>
+      
+    <% include shared/panel-warning-dark.ejs %>
+    <% include shared/panel-chart-dark.ejs %>
+    <% include shared/panel-tele-dark.ejs %>
+    <% include shared/panel-elve-dark.ejs %>
+    <% include shared/panel-density-dark.ejs %>
+    <% include shared/panel-tankcar-dark.ejs %>
+    <% include shared/panel-left-dark.ejs %>
+
+    <!-- <div id="progressbar"></div> -->
+
+    <div id="container"></div>
+
+   <!--  <script src="<%= siteDir %>/pipelines/p_electricPowerLines.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_rainDrainPipes.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_streetLightPowerLines.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_compressedAirPipes.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_waterSupplyPipes.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_naturalGasPipes.js"></script>
+    <script src="<%= siteDir %>/pipelines/p_sewerPipes.js"></script>-->
+    <script src="<%= siteDir %>/featuresConfig.js"></script>
+    <script src="Level1Application.js"></script>
+    <!-- <script src="outdoor.js"></script> -->
+</body>
+
+</html>

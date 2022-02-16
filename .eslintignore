@@ -1,0 +1,8 @@
+/applications/sagw/assets/**
+/applications/chinaMobile/js/echarts.common.min.js
+/applications/chinaMobile/js/jquery.cookie.js
+/applications/chinaMobile/js/jquery.min.js
+/applications/chinaMobile/js/jquery.treeview.js
+/servers/expressServer/node_modules/**
+/libs/**
+/.git/**

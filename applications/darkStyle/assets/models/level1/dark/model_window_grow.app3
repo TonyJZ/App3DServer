@@ -1,0 +1,609 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for 3ds max 2019 v1.3.33"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "extensions": {}
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        1206.35144,
+        106.776733,
+        -164.670715
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_window_grow03"
+    },
+    {
+      "mesh": 1,
+      "translation": [
+        1630.2074,
+        106.389763,
+        60.6123657
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_window_grow02"
+    },
+    {
+      "mesh": 2,
+      "translation": [
+        1630.2074,
+        106.389763,
+        60.6123657
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_window_grow04"
+    },
+    {
+      "mesh": 3,
+      "translation": [
+        1630.2074,
+        106.389763,
+        60.6123657
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_window_grow01"
+    },
+    {
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "Default light"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "mode": 4,
+          "material": 0,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_window_grow03"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 5,
+            "NORMAL": 6,
+            "TEXCOORD_0": 7
+          },
+          "indices": 4,
+          "mode": 4,
+          "material": 1,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 1,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_window_grow02"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 9,
+            "NORMAL": 10,
+            "TEXCOORD_0": 11
+          },
+          "indices": 8,
+          "mode": 4,
+          "material": 2,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 2,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_window_grow04"
+    },
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 13,
+            "NORMAL": 14,
+            "TEXCOORD_0": 15
+          },
+          "indices": 12,
+          "mode": 4,
+          "material": 3,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 3,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_window_grow01"
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 3198,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 2132,
+      "max": [
+        2476.30713,
+        108.16629,
+        3344.95239
+      ],
+      "min": [
+        -4583.67871,
+        -104.918037,
+        -3008.74268
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 2132,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 2132,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "componentType": 5123,
+      "count": 2256,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 1504,
+      "max": [
+        2052.51758,
+        74.07784,
+        3121.80786
+      ],
+      "min": [
+        -5015.077,
+        -105.951431,
+        -3229.67529
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 1504,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 1504,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "componentType": 5123,
+      "count": 1674,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 1116,
+      "max": [
+        2035.04993,
+        105.952065,
+        3119.81958
+      ],
+      "min": [
+        -4335.18,
+        -105.779106,
+        -3263.84058
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 1116,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 1116,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    },
+    {
+      "componentType": 5123,
+      "count": 3312,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 2208,
+      "max": [
+        2021.25842,
+        109.675789,
+        3106.30762
+      ],
+      "min": [
+        -5014.50928,
+        -106.774673,
+        -3243.75635
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 2208,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 2208,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 10612
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 10612,
+      "byteLength": 7971
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 18584,
+      "byteLength": 5989
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 24576,
+      "byteLength": 11181
+    }
+  ],
+  "buffers": [
+    {
+      "name": "model_window_grow",
+      "byteLength": 35760,
+      "uri": "model_window_grow.bin"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.003921569,
+          0.003921569,
+          0.003921569,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0
+      },
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "texCoord": 0
+      },
+      "emissiveFactor": [
+        0.90921396,
+        0.76507026,
+        0.085007824
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639461",
+      "doubleSided": false
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.003921569,
+          0.003921569,
+          0.003921569,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0
+      },
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "texCoord": 0
+      },
+      "emissiveFactor": [
+        2.1214993,
+        1.78516388,
+        0.198351577
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639466",
+      "doubleSided": false
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.003921569,
+          0.003921569,
+          0.003921569,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0
+      },
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "texCoord": 0
+      },
+      "emissiveFactor": [
+        0.15153566,
+        0.12751171,
+        0.014167971
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639462",
+      "doubleSided": false
+    },
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.003921569,
+          0.003921569,
+          0.003921569,
+          1
+        ],
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "metallicFactor": 0,
+        "roughnessFactor": 0
+      },
+      "normalTexture": {
+        "index": 0,
+        "texCoord": 0
+      },
+      "occlusionTexture": {
+        "index": 1,
+        "texCoord": 0
+      },
+      "emissiveFactor": [
+        0.666756868,
+        0.561051548,
+        0.0623390637
+      ],
+      "alphaMode": "OPAQUE",
+      "name": "Material #1399639459",
+      "doubleSided": false
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "grow_nor.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "grow_ao.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "grow.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "grow_nor.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "grow_ao.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "grow.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "grow_nor.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "grow_ao.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "grow.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 0,
+      "name": "grow_nor.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 1,
+      "name": "grow_ao.jpg"
+    },
+    {
+      "sampler": 0,
+      "source": 2,
+      "name": "grow.jpg"
+    }
+  ],
+  "images": [
+    {
+      "name": "grow_nor",
+      "uri": "grow_nor.jpg"
+    },
+    {
+      "name": "grow_ao",
+      "uri": "grow_ao.jpg"
+    },
+    {
+      "name": "grow",
+      "uri": "grow.jpg"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

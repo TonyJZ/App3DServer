@@ -1,0 +1,162 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "babylon.js glTF exporter for 3ds max 2019 v1.3.33"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0,
+        1
+      ],
+      "extensions": {}
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "translation": [
+        30.71045,
+        -2.799385,
+        1002.46906
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "model_river"
+    },
+    {
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "name": "Default light"
+    }
+  ],
+  "meshes": [
+    {
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 1,
+            "NORMAL": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0,
+          "mode": 4,
+          "material": 0,
+          "extensions": {
+            "KHR_draco_mesh_compression": {
+              "bufferView": 0,
+              "attributes": {
+                "POSITION": 0,
+                "NORMAL": 1,
+                "TEXCOORD_0": 2
+              }
+            }
+          }
+        }
+      ],
+      "name": "model_river"
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "count": 474,
+      "type": "SCALAR",
+      "name": "accessorIndices"
+    },
+    {
+      "componentType": 5126,
+      "count": 358,
+      "max": [
+        3249.51318,
+        0.00139117241,
+        2246.651
+      ],
+      "min": [
+        -3259.45947,
+        -0.00139117241,
+        -2200.72681
+      ],
+      "type": "VEC3",
+      "name": "accessorPositions"
+    },
+    {
+      "componentType": 5126,
+      "count": 358,
+      "type": "VEC3",
+      "name": "accessorNormals"
+    },
+    {
+      "componentType": 5126,
+      "count": 358,
+      "type": "VEC2",
+      "name": "accessorUVs"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 1173
+    }
+  ],
+  "buffers": [
+    {
+      "name": "model_river",
+      "byteLength": 1176,
+      "uri": "model_river.bin"
+    }
+  ],
+  "materials": [
+    {
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.0100660538,
+          0.0296262428,
+          0.117647059,
+          0.65
+        ],
+        "metallicFactor": 0.360000044,
+        "roughnessFactor": 0.7
+      },
+      "emissiveFactor": [
+        0.046031896,
+        0.0460318923,
+        0.0460319035
+      ],
+      "alphaMode": "BLEND",
+      "name": "Material #1399635402",
+      "doubleSided": false
+    }
+  ],
+  "extensionsRequired": [
+    "KHR_draco_mesh_compression"
+  ],
+  "extensionsUsed": [
+    "KHR_draco_mesh_compression"
+  ]
+}

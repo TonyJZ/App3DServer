@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="38px" height="38px" viewBox="0 0 38 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_jiankong</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_cut" transform="translate(-765.000000, -153.000000)">
+            <g id="icon" transform="translate(143.000000, 152.000000)">
+                <g id="监控设备" transform="translate(622.000000, 1.000000)">
+                    <g id="icon_jiankong">
+                        <g id="分组-2" fill="#FFFFFF">
+                            <g id="分组">
+                                <circle id="椭圆形" cx="19" cy="19" r="19"></circle>
+                            </g>
+                        </g>
+                        <g id="监控" transform="translate(11.000000, 8.000000)">
+                            <g id="分组-8">
+                                <circle id="椭圆形" stroke="#2B90FF" stroke-width="2" cx="8" cy="8" r="8"></circle>
+                                <rect id="矩形" fill="#2B90FF" x="2" y="20" width="12" height="2" rx="1"></rect>
+                                <path d="M6,17 L10,17 C10.5522847,17 11,17.4477153 11,18 L11,18 C11,18.5522847 10.5522847,19 10,19 L6,19 C5.44771525,19 5,18.5522847 5,18 L5,18 C5,17.4477153 5.44771525,17 6,17 Z" id="矩形-copy-2" fill="#2B90FF" transform="translate(8.000000, 18.000000) rotate(-270.000000) translate(-8.000000, -18.000000) "></path>
+                                <path d="M4.13519368,9.03746606 C4.43122124,9.19586371 4.7682122,9.28573196 5.12500558,9.28573196 C6.29374972,9.28573196 7.25001115,8.32143327 7.25001115,7.14286598 C7.25001115,6.03698461 6.40806377,5.11975761 5.33864683,5.0108274 C6.04507677,4.38170752 6.97696121,4 8,4 C10.213349,4 12,5.78666779 12,8 C12,10.2133322 10.2133322,12 8,12 C6.1456455,12 4.59077854,10.7459004 4.13519368,9.03746606 Z" id="合并形状" fill="#56EAF0" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

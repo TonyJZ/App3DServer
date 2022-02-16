@@ -1,0 +1,52 @@
+<style>
+        #progressbar {
+          color: white;
+          background: rgba(255,255,255,0.3);
+          text-decoration: bold;
+          position: fixed;
+          left: 40%;
+          top: 50%;
+          width: 20%;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
+          z-index: 100;
+          display: block;     
+          border-radius: 12px;
+          background-position: -10% 0;
+          border:2px solid rgba(255,255,255,0.3);
+          background-clip:padding-box;
+        }
+        #progressbar #pro-inner {
+            position: absolute;
+            left:0;
+            top:0;
+            height:100%;
+            width:0%;
+            background:#00ABFF;
+            border-radius:10px;
+            overflow:hidden;
+        }
+        #progressbar .text {
+            position: absolute;
+            left:0;
+            top:0;
+            height:100%;
+            width:100%;  
+        }
+        #progressbar #pro-inner::after {
+            content:'';
+            position: absolute;
+            right:6px;
+            top:6px;
+            width:8px;
+            height:8px;
+            background:#0097E1;
+            border-radius:4px;
+        }
+    </style>
+
+<div id="progressbar">
+    <div id="pro-inner"></div>
+    <span class="text">载入中：0%...</span>
+</div>
